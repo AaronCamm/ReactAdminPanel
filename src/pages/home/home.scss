@@ -1,0 +1,15 @@
+.home {
+    flex: 1;
+    display: flex;
+
+    .homeContainer{
+        flex: 11;
+        height: 80px;
+
+        .widgets{
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+    }
+}

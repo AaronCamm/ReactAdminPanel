@@ -1,0 +1,66 @@
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  span {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(0, 134, 187);
+    font-weight: 500;
+  }
+  .addicon {
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  hr {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: -20.6px;
+    border: 0.2px solid rgb(214, 214, 214);
+  }
+
+  .tasksbody {
+    position: absolute;
+    display: flex;
+    flex: 1;
+    margin-top: 130px;
+    display: flex;
+    flex: 1;
+  }
+
+  .search {
+    display: flex;
+    flex: 1;
+    position: absolute;
+    margin-top: 70px;
+    border: 0.5px solid lightgray;
+    padding: 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    input {
+      width: 500px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    .searchicon {
+      cursor: pointer;
+      display: flex;
+    }
+  }
+}

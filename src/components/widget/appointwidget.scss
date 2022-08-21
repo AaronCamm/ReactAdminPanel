@@ -1,0 +1,29 @@
+.appointments {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+
+  span {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(0, 134, 187);
+    font-weight: 500;
+  }
+
+  hr {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: -20.6px;
+    border: 0.2px solid rgb(214, 214, 214);
+  }
+
+  .appointbody {
+    position: absolute;
+    margin-top: 50px;
+    display: flex;
+    flex: 1;
+  }
+}

@@ -1,0 +1,45 @@
+.sidebar {
+  flex: 1;
+
+  .top {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      cursor: pointer;
+      margin: auto;
+      width: 80px;
+    }
+  }
+
+  .centre {
+    width: 160px;
+    ul {
+      padding-left: 0;
+      li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(215, 254, 255);
+        }
+
+        a{
+          text-decoration: none;
+          color: rgb(65, 88, 90);
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 300;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
