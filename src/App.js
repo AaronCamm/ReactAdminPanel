@@ -1,6 +1,8 @@
 import Home from "./pages/home/Home";
 import Signin from "./pages/signin/Signin";
-import List from "./pages/list/List";
+import ParticipantList from "./pages/list/ParticipantList";
+import CarePlanList from "./pages/list/CarePlanList";
+import IncidentList from "./pages/list/IncidentList";
 import New from "./pages/new/New";
 import Signup from "./pages/signup/Signup";
 import Single from "./pages/single/Single";
@@ -19,27 +21,27 @@ function App() {
             <Route path="signup" element={<Signup/>}/>
             <Route path="settings" element={<Settings/>}/>
             <Route path="staff">
-              <Route index element={<List/>}/>
+              <Route index element={<ParticipantList/>}/>
               <Route path=":staffid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="participants">
-              <Route index element={<List/>}/>
+              <Route index element={<ParticipantList/>}/>
               <Route path=":participantid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="careplans">
-              <Route index element={<List/>}/>
+              <Route index element={<CarePlanList/>}/>
               <Route path=":participantid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="incidents">
-              <Route index element={<List/>}/>
+              <Route index element={<IncidentList/>}/>
               <Route path=":participantid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="resources">
-              <Route index element={<List/>}/>
+              <Route index element={<ParticipantList/>}/>
               <Route path=":resourceid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>

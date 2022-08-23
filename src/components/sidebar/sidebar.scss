@@ -17,26 +17,33 @@
   .centre {
     width: 160px;
     ul {
+      width: 160px;
       padding-left: 0;
-      li {
-        list-style-type: none;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      a {
         display: flex;
         align-items: center;
-        padding: 10px;
+        text-decoration: none;
+        color: rgb(65, 88, 90);
+      }
+      li {
+        width: 160px;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        padding: 15px;
         cursor: pointer;
 
         &:hover {
           background-color: rgb(215, 254, 255);
         }
 
-        a{
-          text-decoration: none;
-          color: rgb(65, 88, 90);
-        }
-
         span {
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 400;
           margin-left: 20px;
         }
       }

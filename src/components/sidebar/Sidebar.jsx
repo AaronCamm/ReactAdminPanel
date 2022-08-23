@@ -17,48 +17,48 @@ export const Sidebar = () => {
       </div>
       <div className="centre">
         <ul>
-          <li>
-            <a href="/">
+          <a href="/">
+            <li>
               <HomeIcon className="icon" />
               <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="/participants">
+            </li>
+          </a>
+          <a href="/participants">
+            <li>
               <PeopleIcon className="icon" />
               <span>Participants</span>
-            </a>
-          </li>
-          <li>
-            <a href="/careplans">
+            </li>
+          </a>
+          <a href="/careplans">
+            <li>
               <TopicIcon className="icon" />
               <span>Care Plans</span>
-            </a>
-          </li>
-          <li>
-            <a href="/incidents">
+            </li>
+          </a>
+          <a href="/incidents">
+            <li>
               <AssignmentLateIcon className="icon" />
               <span>Incidents</span>
-            </a>
-          </li>
-          <li>
-            <a href="/employees">
+            </li>
+          </a>
+          <a href="/staff">
+            <li>
               <BadgeIcon className="icon" />
               <span>Employees</span>
-            </a>
-          </li>
-          <li>
-            <a href="/resources">
+            </li>
+          </a>
+          <a href="/resources">
+            <li>
               <AutoStoriesIcon className="icon" />
               <span>Resources</span>
-            </a>
-          </li>
-          <li>
-            <a href="/settings">
+            </li>
+          </a>
+          <a href="/settings">
+            <li>
               <SettingsIcon className="icon" />
               <span>Settings</span>
-            </a>
-          </li>
+            </li>
+          </a>
         </ul>
       </div>
     </div>
