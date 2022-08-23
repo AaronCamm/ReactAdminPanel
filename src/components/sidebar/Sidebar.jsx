@@ -8,6 +8,7 @@ import AssignmentLateIcon from "@mui/icons-material/AssignmentLate";
 import BadgeIcon from "@mui/icons-material/Badge";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import SettingsIcon from "@mui/icons-material/Settings";
+import ReceiptIcon from '@mui/icons-material/Receipt';
 
 export const Sidebar = () => {
   return (
@@ -47,10 +48,16 @@ export const Sidebar = () => {
               <span>Employees</span>
             </li>
           </a>
-          <a href="/resources">
+          <a href="/documents">
             <li>
               <AutoStoriesIcon className="icon" />
-              <span>Resources</span>
+              <span>Documents</span>
+            </li>
+          </a>
+          <a href="/invoices">
+            <li>
+              <ReceiptIcon className="icon" />
+              <span>Invoices</span>
             </li>
           </a>
           <a href="/settings">

@@ -40,9 +40,14 @@ function App() {
               <Route path=":participantid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
-            <Route path="resources">
+            <Route path="documents">
               <Route index element={<ParticipantList/>}/>
-              <Route path=":resourceid" element={<Single/>}/>
+              <Route path=":documentid" element={<Single/>}/>
+              <Route path="new" element={<New/>}/>
+            </Route>
+            <Route path="invoices">
+              <Route index element={<ParticipantList/>}/>
+              <Route path=":invoiceid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
           </Route>
