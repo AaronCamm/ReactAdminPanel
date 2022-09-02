@@ -42,7 +42,7 @@ export const Sidebar = () => {
               <span>Incidents</span>
             </li>
           </a>
-          <a href="/staff">
+          <a href="/employee">
             <li>
               <BadgeIcon className="icon" />
               <span>Employees</span>

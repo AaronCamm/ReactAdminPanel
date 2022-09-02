@@ -1,10 +1,8 @@
-import "./settings.scss"
+import React from 'react'
 
 const Settings = () => {
   return (
-    <div className="settings">
-      Settings
-    </div>
+    <div>Settings</div>
   )
 }
 

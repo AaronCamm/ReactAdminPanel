@@ -11,7 +11,7 @@ const Widget = () => {
           </div>
           <hr />
           <div className="appointbody">
-            Body
+            
           </div>
         </div>
       </div>

@@ -1,0 +1,93 @@
+.new {
+  flex: 1;
+  display: flex;
+
+  .newContainer {
+    flex: 11;
+    height: 80px;
+
+    .bodyContainer {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+
+      .topbar {
+        width: 500px;
+        position: absolute;
+        margin-left: 60vh;
+
+        h3{
+            margin-left: 10vh;
+        }
+        .form-control-name{
+            margin-left: 24px;
+            width: 300px;
+        }
+        .form-control-position{
+            margin-left: 10px;
+            width: 300px;
+        }
+        .form-group{
+            margin-bottom: 5px;
+        }
+        .form-check-input{
+            margin-left: -3px;
+        }
+
+        span,
+        .addicon {
+          display: flex;
+          justify-content: center;
+          letter-spacing: 1px;
+          color: rgb(0, 134, 187);
+          font-weight: 500;
+        }
+
+        .addicon {
+          cursor: pointer;
+        }
+      }
+
+      .recordsbody {
+        display: flex;
+        flex: 1;
+        margin-top: 130px;
+      }
+
+      hr {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        margin-top: 40px;
+        margin-left: -20.6px;
+        border: 0.2px solid rgb(214, 214, 214);
+      }
+      .search {
+        display: flex;
+        flex: 1;
+        position: absolute;
+        margin-top: 70px;
+        border: 0.5px solid lightgray;
+        padding: 3px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+        input {
+          width: 300px;
+          border: none;
+          outline: none;
+          background-color: transparent;
+
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+        .searchicon {
+          cursor: pointer;
+          display: flex;
+        }
+      }
+    }
+  }
+}
