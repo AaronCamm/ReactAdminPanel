@@ -4,7 +4,7 @@ This is a project I have started in August 22. I am utilising JSX because it is 
 
 ## Completion 1/10
 
-I have only just started this project, but I will continue to add to it and improve it. My experience is with statically type coding languages, predominantly C# (although I can manage to code in any language, I efficiently code in C# with minimal learnings/studying).
+I have only just started this project, but I will continue to add to it and improve it. My experience is with statically type coding languages, predominantly C# (although I can manage to code in any language, I efficiently code in C# and other OOP languages with minimal learnings/studying).
 
 ### `Use Cases`
 
