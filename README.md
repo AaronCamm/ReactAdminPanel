@@ -13,3 +13,5 @@ I am creating this admin panel for my business, however with this, I aim to fill
 ### `Requirements`
 
 The requirements list realistically isn't large. It should have a client management aspect which stores basic client information, case notes for staff about the clients, incident reporting which aligns with NDIS reporting requirements, employee management seciton (not for payroll, just for basic employee information), and finally, important resources which could be training resources for staff or NDIS resources for participants. 
+
+![image](https://user-images.githubusercontent.com/40619424/188106672-e60ed509-873e-4f33-822d-db5ea2331ca8.png)
