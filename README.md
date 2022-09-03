@@ -1,10 +1,10 @@
 # React Admin Panel Project
 
-This is a project I have started in August 22. I am utilising JSX because it is recommended when working with React and I am utilising SCSS for the styling. I am new to front-end development, but these appear the better options currently. For backend implementation, I intend to utilise Firebase. I have generally in the past, utilised MySQL or similar SQL database, however, Firebase looks very useful and should integrate beautifully with React.
+This is a project I have started end of August. I am utilising JSX because it is recommended when working with React and I am utilising SCSS for the styling. I am new to front-end development, but these appear the better options currently. I am using Firebase as my BaaS. I have generally in the past, utilised MySQL or similar SQL database, however, Firebase looks very useful and should integrate well with React.
 
 ## Completion 4/10
 
-I have only just started this project, but I will continue to add to it and improve it. My experience is with statically type coding languages, predominantly C# (although I can manage to code in any language, I efficiently code in C# and other OOP languages with minimal learnings/studying).
+I have only just started this project, but I will continue to add to it and improve it. Although my experience is with statically type coding languages (predominantly C#), I can generally manage to code in any language with a little learning.
 
 ### `Use Cases`
 
