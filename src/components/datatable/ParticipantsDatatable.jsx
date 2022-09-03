@@ -17,6 +17,8 @@ export const Datatable = () => {
     .then((snapshot) => setTableData(snapshot.val()));
   }, []);
 
+  console.log(tableData);
+
   return (
     <div className="datatable">
       <DataGrid

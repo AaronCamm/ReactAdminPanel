@@ -4,11 +4,16 @@ import ParticipantList from "./pages/list/ParticipantList";
 import EmployeeList from "./pages/list/EmployeeList";
 import CarePlanList from "./pages/list/CarePlanList";
 import IncidentList from "./pages/list/IncidentList";
+import DocumentList from "./pages/list/DocumentList";
 import New from "./pages/new/New";
 import NewEmployee from "./pages/new/NewEmployee";
 import Signup from "./pages/signup/Signup";
 import Single from "./pages/single/Single";
 import Settings from "./pages/settings/Settings";
+import SingleParticipant from "./pages/single/SingleParticipant";
+import SingleCareplan from "./pages/single/SingleCareplan";
+import SingleEmployee from "./pages/single/SingleEmployee";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -23,17 +28,17 @@ function App() {
             <Route path="settings" element={<Settings/>}/>
             <Route path="employee">
               <Route index element={<EmployeeList/>}/>
-              <Route path=":employeeid" element={<Single/>}/>
+              <Route path=":employeeid" element={<SingleEmployee/>}/>
               <Route path="new" element={<NewEmployee/>}/>
             </Route>
             <Route path="participants">
               <Route index element={<ParticipantList/>}/>
-              <Route path=":participantid" element={<Single/>}/>
+              <Route path=":participantid" element={<SingleParticipant/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="careplans">
               <Route index element={<CarePlanList/>}/>
-              <Route path=":participantid" element={<Single/>}/>
+              <Route path=":careplanid" element={<SingleCareplan/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="incidents">
@@ -42,7 +47,7 @@ function App() {
               <Route path="new" element={<New/>}/>
             </Route>
             <Route path="documents">
-              <Route index element={<ParticipantList/>}/>
+              <Route index element={<DocumentList/>}/>
               <Route path=":documentid" element={<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>

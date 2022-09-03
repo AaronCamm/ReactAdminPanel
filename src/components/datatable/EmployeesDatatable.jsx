@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./datatable.scss";
-import { DataGrid } from '@mui/x-data-grid';
-import { columns } from "../../incidentdatabase.js";
+import { DataGrid } from "@mui/x-data-grid";
+import { columns } from "../../employeesdatabase.js";
 import { initializeApp } from "@firebase/app";
 import { get, getDatabase, ref, child } from "firebase/database";
 import { firebaseConfig } from "../../config";
@@ -13,7 +13,7 @@ export const Datatable = () => {
     initializeApp(firebaseConfig);
     const dbRef = ref(getDatabase());
 
-    get(child(dbRef, `incidents`))
+    get(child(dbRef, `employees`))
     .then((snapshot) => setTableData(snapshot.val()));
   }, []);
 

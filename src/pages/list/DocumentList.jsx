@@ -1,9 +1,9 @@
 import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import AddIcon from "@mui/icons-material/Add";
+import { DocumentWidget } from "../../components/widget/DocumentWidget";
 import SearchIcon from "@mui/icons-material/Search";
-import { Datatable } from "../../components/datatable/EmployeesDatatable";
+import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
 
 const List = () => {
@@ -16,8 +16,8 @@ const List = () => {
           <div className="backing">
             <div className="widget">
               <div className="topbar">
-                <div className="recordstext">
-                  <span>Employee Records</span>
+                <div className="documentText">
+                  <span>Documents</span>
                 </div>
                 <Link to="/employee/new">
                   <div className="addicon">
@@ -31,7 +31,7 @@ const List = () => {
                 <SearchIcon className="searchicon" />
               </div>
               <div className="recordsbody">
-                <Datatable />
+                <DocumentWidget />
               </div>
             </div>
           </div>

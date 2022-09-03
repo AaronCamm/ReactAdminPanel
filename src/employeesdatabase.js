@@ -3,39 +3,34 @@ import { Link } from "react-router-dom";
 
 export const columns = [
   {
-    field: "ndisNumber",
-    headerName: "NDIS Number",
+    field: "employeeNumber",
+    headerName: "Employee Number",
     width: 220,
   },
   {
-    field: "participantFirst",
+    field: "employeeFirst",
     headerName: "First name",
     width: 210,
   },
   {
-    field: "participantLast",
+    field: "employeeLast",
     headerName: "Last name",
     width: 210,
   },
   {
-    field: "planDuration",
-    headerName: "Plan Duration",
+    field: "position",
+    headerName: "Position",
     width: 220,
   },
   {
-    field: "startDate",
-    headerName: "Start Date",
-    width: 180,
+    field: "emergencyContact",
+    headerName: "Primary Contact",
+    width: 220,
   },
   {
-    field: "endDate",
-    headerName: "End Date",
-    width: 180,
-  },
-  {
-    field: "planAmount",
-    headerName: "Plan Amount",
-    width: 230,
+    field: "emergencyContactNumber",
+    headerName: "Primary Contact Number",
+    width: 220,
   },
   {
     field: "view",
@@ -44,7 +39,7 @@ export const columns = [
     renderCell: (params) => {
       return (
         <div className="iconImg">
-          <Link to={"/careplans/" + params.row.id} >            
+          <Link to={"/employee/" + params.row.id}>
             <VisibilityIcon />
           </Link>
         </div>

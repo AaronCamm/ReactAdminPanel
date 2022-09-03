@@ -47,33 +47,3 @@ export const columns = [
     },
   },
 ];
-
-export const rows = [
-  {
-    id: 1,
-    incidentId: 1234,
-    participantName: "John Simmons",
-    relation: "Support Worker",
-    author: "Michelle Harper",
-    dateCompleted: "04/07/2022",
-    incidentType: "Physical Assault - Near Miss"
-  },
-  {
-    id: 2,
-    incidentId: 12345,
-    participantName: "Joanne Butters",
-    relation: "Support Worker",
-    author: "Toby McGuire",
-    dateCompleted: "21/01/2022",
-    incidentType: "Physical Assault - Actual"
-  },
-  {
-    id: 3,
-    incidentId: 123456,
-    participantName: "John Simmons",
-    relation: "Support Worker",
-    author: "Michelle Harper",
-    dateCompleted: "04/07/2022",
-    incidentType: "Verbal Assault - Actual"
-  }
-];
