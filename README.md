@@ -24,5 +24,7 @@ I will add to this list as I realise what I have forgotten, haha.
 - Notifications and Profile both need functionality and their own page + designs.
 - Most functions need their own 'New' functionality 'New Employee', 'New Participant', etc.
 - Documents section needs the ability to upload documents - should be simple enough.
+- Error handling
+- Sanitization
 
 ![image](https://user-images.githubusercontent.com/40619424/188106672-e60ed509-873e-4f33-822d-db5ea2331ca8.png)
