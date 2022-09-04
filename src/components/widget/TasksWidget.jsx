@@ -1,7 +1,6 @@
 import "./taskswidget.scss";
 import "./backingwidget.scss";
 import AddIcon from "@mui/icons-material/Add";
-import SearchIcon from "@mui/icons-material/Search";
 
 const Widget = () => {
   return (
@@ -15,10 +14,6 @@ const Widget = () => {
             <AddIcon />
           </div>
           <hr />
-          <div className="search">
-            <input type="text" placeholder="Search..." />
-            <SearchIcon className="searchicon" />
-          </div>
           <div className="tasksbody">
             Body
           </div>

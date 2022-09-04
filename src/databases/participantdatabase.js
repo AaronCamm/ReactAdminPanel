@@ -30,12 +30,12 @@ export const columns = [
   {
     field: "status",
     headerName: "Status",
-    width: 115,
+    width: 150,
   },
   {
     field: "planType",
     headerName: "Type",
-    width: 210,
+    width: 230,
   },
   {
     field: "view",

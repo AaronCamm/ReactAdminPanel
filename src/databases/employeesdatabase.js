@@ -24,13 +24,13 @@ export const columns = [
   },
   {
     field: "emergencyContact",
-    headerName: "Primary Contact",
-    width: 220,
+    headerName: "Emergency Contact",
+    width: 300,
   },
   {
     field: "emergencyContactNumber",
-    headerName: "Primary Contact Number",
-    width: 220,
+    headerName: "Emergency Contact Number",
+    width: 300,
   },
   {
     field: "view",
@@ -39,7 +39,7 @@ export const columns = [
     renderCell: (params) => {
       return (
         <div className="iconImg">
-          <Link to={"/employee/" + params.row.id}>
+          <Link to={"/employees/" + params.row.id}>
             <VisibilityIcon />
           </Link>
         </div>

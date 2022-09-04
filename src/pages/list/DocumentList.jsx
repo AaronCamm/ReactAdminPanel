@@ -2,7 +2,6 @@ import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import { DocumentWidget } from "../../components/widget/DocumentWidget";
-import SearchIcon from "@mui/icons-material/Search";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
 
@@ -26,12 +25,8 @@ const List = () => {
                 </Link>
               </div>
               <hr />
-              <div className="search">
-                <input type="text" placeholder="Search..." />
-                <SearchIcon className="searchicon" />
-              </div>
               <div className="recordsbody">
-                <DocumentWidget />
+                <DocumentWidget className="datatable"/>
               </div>
             </div>
           </div>

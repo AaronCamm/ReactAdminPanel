@@ -3,12 +3,29 @@
   flex: 1;
   justify-content: space-between;
 
-  span {
+  span, .addicon {
     display: flex;
     justify-content: center;
     letter-spacing: 1px;
     color: rgb(0, 134, 187);
     font-weight: 500;
+  }
+  .addicon {
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .addicon {
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   hr {

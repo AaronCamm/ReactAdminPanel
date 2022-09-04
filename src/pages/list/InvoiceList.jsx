@@ -2,10 +2,10 @@ import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import AddIcon from "@mui/icons-material/Add";
-import { Datatable } from "../../components/datatable/ParticipantsDatatable";
+import { Datatable } from "../../components/datatable/InvoiceDatatable";
 import { Link } from "react-router-dom";
 
-const List = () => {
+const InvoiceList = () => {
   return (
     <div className="list">
       <Sidebar />
@@ -16,9 +16,9 @@ const List = () => {
             <div className="widget">
               <div className="topbar">
                 <div className="recordstext">
-                  <span>Participant Records</span>
+                  <span>Invoices</span>
                 </div>
-                <Link to="/participants/new">
+                <Link to="/invoices/new">
                   <div className="addicon">
                     <AddIcon />
                   </div>
@@ -36,4 +36,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default InvoiceList;

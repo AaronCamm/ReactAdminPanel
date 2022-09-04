@@ -3,7 +3,7 @@ import { initializeApp } from "@firebase/app";
 import { getStorage, ref, listAll } from "firebase/storage";
 import { firebaseConfig } from "../../config";
 import { DataGrid } from "@mui/x-data-grid";
-import VisibilityIcon from "@mui/icons-material/Visibility";
+import DownloadIcon from "@mui/icons-material/Download";
 import { Link } from "react-router-dom";
 import "../datatable/datatable.scss";
 
@@ -40,17 +40,19 @@ export const DocumentWidget = () => {
           {
             field: "documentName",
             headerName: "Document Name",
-            width: 1500,
+            width: 1400,
           },
           {
             field: "view",
-            headerName: "View",
-            width: 115,
+            headerName: "View/Download",
+            width: 215,
+            sortable: false,
+            disableColumnMenu: true,
             renderCell: (params) => {
               return (
                 <div className="iconImg">
-                  <Link to={"/careplans/" + params.row.id}>
-                    <VisibilityIcon />
+                  <Link to={"/documents/" + refData[params.row.id].documentName}>
+                    <DownloadIcon />
                   </Link>
                 </div>
               );

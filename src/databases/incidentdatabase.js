@@ -5,32 +5,32 @@ export const columns = [
   {
     field: "incidentId",
     headerName: "Incident ID",
-    width: 220,
+    width: 230,
   },
   {
     field: "participantName",
     headerName: "Participant Name",
-    width: 220,
+    width: 230,
   },
   {
     field: "relation",
     headerName: "Relationship",
-    width: 220,
+    width: 230,
   },
   {
     field: "author",
     headerName: "Completed By",
-    width: 220,
+    width: 230,
   },
   {
     field: "dateCompleted",
     headerName: "Date Completed",
-    width: 180,
+    width: 200,
   },
   {
     field: "incidentType",
     headerName: "Type of Incident",
-    width: 350,
+    width: 370,
   },
   {
     field: "view",

@@ -1,5 +1,6 @@
 import "./appointwidget.scss";
 import "./backingwidget.scss";
+import AddIcon from "@mui/icons-material/Add";
 
 const Widget = () => {
   return (
@@ -9,9 +10,12 @@ const Widget = () => {
           <div className="appointtext">
             <span>Appointments</span>
           </div>
+          <div className="addicon">
+            <AddIcon />
+          </div>
           <hr />
           <div className="appointbody">
-            
+            Body
           </div>
         </div>
       </div>

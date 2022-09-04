@@ -35,7 +35,7 @@ export const columns = [
   {
     field: "planAmount",
     headerName: "Plan Amount",
-    width: 230,
+    width: 250,
   },
   {
     field: "view",
