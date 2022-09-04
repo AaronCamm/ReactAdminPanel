@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { columns } from "../../employeesdatabase.js";
+import { columns } from "../../databases/employeesdatabase.js";
 import { initializeApp } from "@firebase/app";
 import { get, getDatabase, ref, child } from "firebase/database";
 import { firebaseConfig } from "../../config";
