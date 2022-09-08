@@ -1,0 +1,80 @@
+```
+📦 
+├─ .gitignore
+├─ README.md
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ favicon.ico
+│  └─ index.html
+└─ src
+   ├─ App.js
+   ├─ TODO
+   ├─ components
+   │  ├─ datatable
+   │  │  ├─ CarePlanDatatable.jsx
+   │  │  ├─ EmployeesDatatable.jsx
+   │  │  ├─ IncidentsDatatable.jsx
+   │  │  ├─ InvoiceDatatable.jsx
+   │  │  ├─ ParticipantsDatatable.jsx
+   │  │  └─ datatable.scss
+   │  ├─ navbar
+   │  │  ├─ Navbar.jsx
+   │  │  └─ navbar.scss
+   │  ├─ sidebar
+   │  │  ├─ Sidebar.jsx
+   │  │  └─ sidebar.scss
+   │  └─ widget
+   │     ├─ AppointWidget.jsx
+   │     ├─ DocumentWidget.jsx
+   │     ├─ TasksWidget.jsx
+   │     ├─ appointwidget.scss
+   │     ├─ backingwidget.scss
+   │     └─ taskswidget.scss
+   ├─ config.js
+   ├─ config.js.hidden
+   ├─ databases
+   │  ├─ careplandatabase.js
+   │  ├─ employeesdatabase.js
+   │  ├─ incidentdatabase.js
+   │  ├─ invoicedatabase.js
+   │  └─ participantdatabase.js
+   ├─ img
+   │  ├─ Logo-NoIcon.png
+   │  └─ bssicon.png
+   ├─ index.js
+   └─ pages
+      ├─ home
+      │  ├─ Home.jsx
+      │  └─ home.scss
+      ├─ list
+      │  ├─ CarePlanList.jsx
+      │  ├─ DocumentList.jsx
+      │  ├─ EmployeeList.jsx
+      │  ├─ IncidentList.jsx
+      │  ├─ InvoiceList.jsx
+      │  ├─ ParticipantList.jsx
+      │  └─ list.scss
+      ├─ new
+      │  ├─ New.jsx
+      │  ├─ NewEmployee.jsx
+      │  ├─ new.scss
+      │  └─ newemployee.scss
+      ├─ settings
+      │  ├─ Settings.jsx
+      │  └─ settings.scss
+      ├─ signin
+      │  ├─ Signin.jsx
+      │  └─ signin.scss
+      ├─ signup
+      │  ├─ Signup.jsx
+      │  └─ signup.scss
+      └─ single
+         ├─ Single.jsx
+         ├─ SingleCareplan.jsx
+         ├─ SingleDocument.jsx
+         ├─ SingleEmployee.jsx
+         ├─ SingleIncident.jsx
+         ├─ SingleParticipant.jsx
+         └─ single.scss
+```

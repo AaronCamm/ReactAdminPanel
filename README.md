@@ -15,16 +15,7 @@ I am creating this admin panel for my business, however with this, I aim to fill
 The requirements list realistically isn't large. It should have a client management aspect which stores basic client information, case notes for staff about the clients, incident reporting which aligns with NDIS reporting requirements, employee management seciton (not for payroll, just for basic employee information), have efficient Firebase database inclusion and finally, important resources which could be training resources for staff or NDIS resources for participants.
 
 ### `List of Things To Do`
+  * TODO File lists all incomplete jobs.
 
-I will add to this list as I realise what I have forgotten, haha.
-- Finish dashboard functionality (will likely involve a To-Do and Appointment widget connected to Firebase).
-- Complete designs for 'Single' pages for each section.
-- Need to change the view icon to a download icon and then make that functional.
-- Invoice section hasn't been touched yet (will likely do a little bit of this before jumping back into the other things).
-- Notifications and Profile both need functionality and their own page + designs.
-- Most functions need their own 'New' functionality 'New Employee', 'New Participant', etc.
-- Documents section needs the ability to upload documents - should be simple enough.
-- Error handling
-- Sanitization
-
+Live (May not be complete up-to-date): https://react-admin-panel-fidtr2qmr-aaroncamm.vercel.app/
 ![image](https://user-images.githubusercontent.com/40619424/188106672-e60ed509-873e-4f33-822d-db5ea2331ca8.png)
