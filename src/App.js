@@ -6,8 +6,8 @@ import CarePlanList from "./pages/list/CarePlanList";
 import IncidentList from "./pages/list/IncidentList";
 import DocumentList from "./pages/list/DocumentList";
 import InvoiceList from "./pages/list/InvoiceList";
-import New from "./pages/new/New";
 import NewEmployee from "./pages/new/NewEmployee";
+import NewParticipant from "./pages/new/NewParticipant";
 import Signup from "./pages/signup/Signup";
 import Single from "./pages/single/Single";
 import Settings from "./pages/settings/Settings";
@@ -37,27 +37,27 @@ function App() {
             <Route path="participants">
               <Route index element={<ParticipantList/>}/>
               <Route path=":participantid" element={<SingleParticipant/>}/>
-              <Route path="new" element={<New/>}/>
+              <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="careplans">
               <Route index element={<CarePlanList/>}/>
               <Route path=":careplanid" element={<SingleCareplan/>}/>
-              <Route path="new" element={<New/>}/>
+              <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="incidents">
               <Route index element={<IncidentList/>}/>
               <Route path=":incidentid" element={<SingleIncident/>}/>
-              <Route path="new" element={<New/>}/>
+              <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="documents">
               <Route index element={<DocumentList/>}/>
               <Route path=":documentname" element={<SingleDocument/>}/>
-              <Route path="new" element={<New/>}/>
+              <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="invoices">
               <Route index element={<InvoiceList/>}/>
               <Route path=":invoiceid" element={<Single/>}/>
-              <Route path="new" element={<New/>}/>
+              <Route path="new" element={<NewParticipant/>}/>
             </Route>
           </Route>
         </Routes>

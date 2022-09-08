@@ -18,7 +18,7 @@ const List = () => {
                 <div className="recordstext">
                   <span>Employee Records</span>
                 </div>
-                <Link to="/employee/new">
+                <Link to="/employees/new">
                   <div className="addicon">
                     <AddIcon />
                   </div>
