@@ -17,5 +17,5 @@ The requirements list realistically isn't large. It should have a client managem
 ### `List of Things To Do`
   * TODO File lists all incomplete jobs.
 
-Live (May not be complete up-to-date): https://react-admin-panel-fidtr2qmr-aaroncamm.vercel.app/
+Live (May not be completely up-to-date): https://react-admin-panel-phi.vercel.app/
 ![image](https://user-images.githubusercontent.com/40619424/188106672-e60ed509-873e-4f33-822d-db5ea2331ca8.png)
