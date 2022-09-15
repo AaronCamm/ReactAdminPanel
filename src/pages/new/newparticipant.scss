@@ -1,9 +1,12 @@
+/*
+Blue: #1976d2
+*/
+
 .new {
   flex: 1;
   display: flex;
 
   .newContainer {
-    flex: 11;
     height: 80px;
 
     .bodyContainer {
@@ -28,9 +31,40 @@
 
       .recordsbody {
         display: flex;
-        position: absolute;
-        flex: 1;
+        flex-direction: column;
         margin-top: 80px;
+
+        .textArea {
+          min-width: 70vh;
+          min-height: 20vh;
+        }
+
+        .formField {
+          margin-top: 2vh;
+          height: 40vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .firstInput,
+        .secondInput,
+        .thirdInput,
+        .fourthInput,
+        .fifthInput {
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        ::-webkit-input-placeholder {
+          font-style: italic;
+       }
+
+        .tabList {
+          display: flex;
+          justify-items: space-around;
+          width: 50vh;
+        }
 
         label {
           display: flex;
@@ -38,13 +72,19 @@
 
           input,
           select {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             outline: none;
             border-top: none;
             border-left: none;
             border-right: none;
+            border-width: 1px;
             margin-left: 15px;
+            width: 40vh;
+          }
+          input:focus {
+            border-color: #1976d2;
+            border-width: 2px;
           }
 
           select {
@@ -58,12 +98,27 @@
             }
           }
         }
-        button {
-          margin-top: 30px;
-          width: 430px;
+        .addDiv {
+          display: flex;
+          justify-content: space-around;
 
-          &:hover {
-            cursor: pointer;
+          .addParticipant {
+            display: flex;
+            justify-content: center;
+            margin-top: 5vh;
+            width: 11vh;
+            height: 4vh;
+            border-radius: 5%;
+            align-items: center;
+
+            background-color: #1976d2;
+            font-weight: 700;
+            border: none;
+            color: white;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }

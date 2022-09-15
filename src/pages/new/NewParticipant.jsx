@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import { initializeApp } from "@firebase/app";
 import { set, get, getDatabase, ref, child } from "firebase/database";
 import { firebaseConfig } from "../../config";
 import "./newparticipant.scss";
+import AddIcon from "@mui/icons-material/Add";
 
 const NewParticipant = () => {
   initializeApp(firebaseConfig);
@@ -19,8 +20,37 @@ const NewParticipant = () => {
   const [participantLast, setParticipantLast] = useState("");
   const [primaryContactName, setPrimaryContactName] = useState("");
   const [primaryContact, setPrimaryContact] = useState("");
+  const [dob, setDob] = useState("");
+  const [disabilities, setDisabilities] = useState("");
+  const [languages, setLanguages] = useState("");
   const [planType, setPlanType] = useState("Plan Managed");
   const [planStatus, setPlanStatus] = useState("Active");
+
+  const [likes, setLikes] = useState("");
+  const [dislikes, setDislikes] = useState("");
+  const [goals, setGoals] = useState("");
+  const [supportMe, setSupportMe] = useState("");
+
+  const [connections, setConnections] = useState([
+    {
+      0: "",
+      1: "",
+      2: "",
+      3: "",
+      4: "",
+      5: "",
+      6: "",
+      7: "",
+      8: "",
+      9: "",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+    },
+  ]);
 
   const handleSubmit = (event) => {
     const db = getDatabase();
@@ -33,6 +63,16 @@ const NewParticipant = () => {
       primaryContact: primaryContact,
       planType: planType,
       status: planStatus,
+      dob: dob,
+      disabilities: disabilities,
+      languages: languages,
+
+      likes: likes,
+      dislikes: dislikes,
+      goals: goals,
+      supportMe: supportMe,
+
+      connections: connections,
     });
   };
 
@@ -46,40 +86,7 @@ const NewParticipant = () => {
     );
   }, []);
 
-  function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
-
-  TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-  };
-
-  function tabProps(index) {
-    return {
-      id: `simple-tab-${index}`,
-      "aria-controls": `simple-tabpanel-${index}`,
-    };
-  }
-
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -100,108 +107,490 @@ const NewParticipant = () => {
               </div>
               <hr />
               <div className="recordsbody">
-                <div className="tabBody">
-                  <Box sx={{ width: "100%" }}>
-                    <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-                      <Tabs value={value} onChange={handleChange} centered variant="fullWidth" sx={"width: 170vh"}>
-                        <Tab label="Client Information" {...tabProps(0)} />
-                        <Tab label="Client Goals" {...tabProps(1)} />
-                        <Tab label="Support Address" {...tabProps(2)} />
-                        <Tab label="Care Team Contacts" {...tabProps(3)} />
-                      </Tabs>
+                <Box
+                  sx={{
+                    width: "169vh",
+                    typography: "body1",
+                  }}
+                >
+                  <TabContext value={value}>
+                    <Box
+                      sx={{
+                        borderBottom: 1,
+                        borderColor: "divider",
+                        display: "flex",
+                        justifyContent: "space-around",
+                      }}
+                    >
+                      <TabList onChange={handleChange}>
+                        <Tab
+                          label="Basic Details"
+                          value="1"
+                          className="tabList"
+                        />
+                        <Tab
+                          label="Goals & Info"
+                          value="2"
+                          className="tabList"
+                        />
+                        <Tab
+                          label="Connections"
+                          value="3"
+                          className="tabList"
+                        />
+                      </TabList>
                     </Box>
-                    <TabPanel value={value} index={0}>
-                      <form onSubmit={handleSubmit}>
-                        <label>
-                          Participant First Name:{" "}
-                          <input
-                            type="text"
-                            value={participantFirst}
-                            onChange={(e) =>
-                              setParticipantFirst(e.target.value)
-                            }
-                            required
-                          />
-                        </label>
-                        <label>
-                          Participant Last Name:{" "}
-                          <input
-                            type="text"
-                            value={participantLast}
-                            onChange={(e) => setParticipantLast(e.target.value)}
-                            required
-                          />
-                        </label>
-                        <br />
-                        <label>
-                          Primary Contact Name:{" "}
-                          <input
-                            type="text"
-                            value={primaryContactName}
-                            onChange={(e) =>
-                              setPrimaryContactName(e.target.value)
-                            }
-                            required
-                          />
-                        </label>
-                        <label>
-                          Primary Contact:{" "}
-                          <input
-                            type="text"
-                            value={primaryContact}
-                            onChange={(e) => setPrimaryContact(e.target.value)}
-                            required
-                          />
-                        </label>
-                        <label>
-                          NDIS Number:{" "}
-                          <input
-                            type="text"
-                            value={ndisNum}
-                            onChange={(e) => setNdisNum(e.target.value)}
-                            required
-                          />
-                        </label>
-                        <br />
-                        <label>
-                          Plan Type:{" "}
-                          <select
-                            value={planType}
-                            onChange={(e) => setPlanType(e.target.value)}
-                            required
-                          >
-                            <option value="planManaged">Plan Managed</option>
-                            <option value="selfManaged">Self Managed</option>
-                            <option value="ndiaManaged">NDIA Managed</option>
-                          </select>
-                        </label>
-                        <label>
-                          Status:{" "}
-                          <select
-                            value={planStatus}
-                            onChange={(e) => setPlanStatus(e.target.value)}
-                            required
-                          >
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                          </select>
-                        </label>
+                    <form onSubmit={handleSubmit}>
+                      <TabPanel value="1">
+                        <div className="formField">
+                          <div className="firstInput">
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="First Name"
+                                value={participantFirst}
+                                onChange={(e) =>
+                                  setParticipantFirst(e.target.value)
+                                }
+                                required
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Last Name"
+                                value={participantLast}
+                                onChange={(e) =>
+                                  setParticipantLast(e.target.value)
+                                }
+                                required
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Primary Contact Name"
+                                value={primaryContactName}
+                                onChange={(e) =>
+                                  setPrimaryContactName(e.target.value)
+                                }
+                                required
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Primary Contact Email/Number"
+                                value={primaryContact}
+                                onChange={(e) =>
+                                  setPrimaryContact(e.target.value)
+                                }
+                                required
+                              />
+                            </label>
+                          </div>
+                          <br />
+                          <div className="secondInput">
+                            <label>
+                              <input
+                                type="date"
+                                placeholder="Date of Birth"
+                                value={dob}
+                                onChange={(e) => setDob(e.target.value)}
+                                required
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Disabilities"
+                                value={disabilities}
+                                onChange={(e) =>
+                                  setDisabilities(e.target.value)
+                                }
+                                required
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Languages Spoken"
+                                value={languages}
+                                onChange={(e) => setLanguages(e.target.value)}
+                                required
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="NDIS Number"
+                                value={ndisNum}
+                                onChange={(e) => setNdisNum(e.target.value)}
+                                required
+                              />
+                            </label>
+                          </div>
+                          <br />
+                          <div className="thirdInput">
+                            <label>
+                              Plan Type:{" "}
+                              <select
+                                value={planType}
+                                onChange={(e) => setPlanType(e.target.value)}
+                                required
+                              >
+                                <option value="planManaged">
+                                  Plan Managed
+                                </option>
+                                <option value="selfManaged">
+                                  Self Managed
+                                </option>
+                                <option value="ndiaManaged">
+                                  NDIA Managed
+                                </option>
+                              </select>
+                            </label>
+                            <label>
+                              Status:{" "}
+                              <select
+                                value={planStatus}
+                                onChange={(e) => setPlanStatus(e.target.value)}
+                                required
+                              >
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                              </select>
+                            </label>
+                          </div>
+                        </div>
+                      </TabPanel>
+                      <TabPanel value="2">
+                        <div className="formField">
+                          <div className="firstInput">
+                            <label>
+                              <textarea
+                                className="textArea"
+                                type="text"
+                                placeholder="Likes & Interests"
+                                value={likes}
+                                onChange={(e) => setLikes(e.target.value)}
+                                required
+                              />
+                            </label>
+                            <label>
+                              <textarea
+                                className="textArea"
+                                type="text"
+                                placeholder="Dislikes"
+                                value={dislikes}
+                                onChange={(e) => setDislikes(e.target.value)}
+                                required
+                              />
+                            </label>
+                          </div>
+                          <br />
+                          <div className="secondInput">
+                            <label>
+                              <textarea
+                                className="textArea"
+                                type="text"
+                                placeholder="Goals"
+                                value={goals}
+                                onChange={(e) => setGoals(e.target.value)}
+                                required
+                              />
+                            </label>
+                            <label>
+                              <textarea
+                                className="textArea"
+                                type="text"
+                                placeholder="How To Support Me"
+                                value={supportMe}
+                                onChange={(e) => setSupportMe(e.target.value)}
+                                required
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </TabPanel>
+                      <TabPanel value="3">
+                        <div className="formField">
+                          <div className="secondInput">
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Name"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [0]: e.target.value,
+                                  }));
+                                }}
+                                required
+                                onInvalid={(e) => e.target.setCustomValidity('Please provide at least one contact')}
+                                onInput={(e) => e.target.setCustomValidity("")}
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Info"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [1]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [2]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="landLine">Landline</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="email">Email</option>
+                              </select>
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [3]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="emergency">
+                                  Emergency Contact
+                                </option>
+                                <option value="family">Family Member</option>
+                                <option value="friend">Friend</option>
+                                <option value="doctor">GP/Doctor</option>
+                                <option value="psychiatrist">
+                                  Psychiatrist
+                                </option>
+                                <option value="alliedHealth">
+                                  Allied Health
+                                </option>
+                              </select>
+                            </label>
+                          </div>
+                          <br />
+                          <div className="firstInput">
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Name"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [4]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Info"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [5]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [6]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="landLine">Landline</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="email">Email</option>
+                              </select>
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [7]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="emergency">
+                                  Emergency Contact
+                                </option>
+                                <option value="family">Family Member</option>
+                                <option value="friend">Friend</option>
+                                <option value="doctor">GP/Doctor</option>
+                                <option value="psychiatrist">
+                                  Psychiatrist
+                                </option>
+                                <option value="alliedHealth">
+                                  Allied Health
+                                </option>
+                              </select>
+                            </label>
+                          </div>
+                          <br />
+                          <div className="thirdInput">
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Name"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [8]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Info"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [9]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [10]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="landLine">Landline</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="email">Email</option>
+                              </select>
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [11]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="emergency">
+                                  Emergency Contact
+                                </option>
+                                <option value="family">Family Member</option>
+                                <option value="friend">Friend</option>
+                                <option value="doctor">GP/Doctor</option>
+                                <option value="psychiatrist">
+                                  Psychiatrist
+                                </option>
+                                <option value="alliedHealth">
+                                  Allied Health
+                                </option>
+                              </select>
+                            </label>
+                          </div>
+                          <br />
+                          <div className="fourthInput">
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Name"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [12]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <input
+                                type="text"
+                                placeholder="Contact Info"
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [13]: e.target.value,
+                                  }));
+                                }}
+                              />
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [14]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="landLine">Landline</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="email">Email</option>
+                              </select>
+                            </label>
+                            <label>
+                              <select
+                                onChange={(e) => {
+                                  setConnections((arr) => ({
+                                    ...arr,
+                                    [15]: e.target.value,
+                                  }));
+                                }}
+                              >
+                                <option/>
+                                <option value="emergency">
+                                  Emergency Contact
+                                </option>
+                                <option value="family">Family Member</option>
+                                <option value="friend">Friend</option>
+                                <option value="doctor">GP/Doctor</option>
+                                <option value="psychiatrist">
+                                  Psychiatrist
+                                </option>
+                                <option value="alliedHealth">
+                                  Allied Health
+                                </option>
+                              </select>
+                            </label>
+                          </div>
+                        </div>
+                      </TabPanel>
+                      <div className="addDiv">
                         <button type="submit" className="addParticipant">
-                          Add
+                          Add <AddIcon />
                         </button>
-                      </form>
-                    </TabPanel>
-                    <TabPanel value={value} index={1}>
-                      Item Two
-                    </TabPanel>
-                    <TabPanel value={value} index={2}>
-                      Item Three
-                    </TabPanel>
-                    <TabPanel value={value} index={3}>
-                      Item Four
-                    </TabPanel>
-                  </Box>
-                </div>
+                      </div>
+                    </form>
+                  </TabContext>
+                </Box>
               </div>
             </div>
           </div>
