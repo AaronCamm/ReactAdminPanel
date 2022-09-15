@@ -2,6 +2,7 @@
 📦 
 ├─ .gitignore
 ├─ README.md
+├─ TREE
 ├─ package-lock.json
 ├─ package.json
 ├─ public
@@ -56,10 +57,10 @@
       │  ├─ ParticipantList.jsx
       │  └─ list.scss
       ├─ new
-      │  ├─ New.jsx
       │  ├─ NewEmployee.jsx
-      │  ├─ new.scss
-      │  └─ newemployee.scss
+      │  ├─ NewParticipant.jsx
+      │  ├─ newemployee.scss
+      │  └─ newparticipant.scss
       ├─ settings
       │  ├─ Settings.jsx
       │  └─ settings.scss
