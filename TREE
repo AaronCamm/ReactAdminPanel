@@ -13,11 +13,7 @@
    ├─ TODO
    ├─ components
    │  ├─ datatable
-   │  │  ├─ CarePlanDatatable.jsx
-   │  │  ├─ EmployeesDatatable.jsx
-   │  │  ├─ IncidentsDatatable.jsx
-   │  │  ├─ InvoiceDatatable.jsx
-   │  │  ├─ ParticipantsDatatable.jsx
+   │  │  ├─ Datatable.jsx
    │  │  └─ datatable.scss
    │  ├─ navbar
    │  │  ├─ Navbar.jsx
@@ -33,7 +29,6 @@
    │     ├─ backingwidget.scss
    │     └─ taskswidget.scss
    ├─ config.js
-   ├─ config.js.hidden
    ├─ databases
    │  ├─ careplandatabase.js
    │  ├─ employeesdatabase.js
