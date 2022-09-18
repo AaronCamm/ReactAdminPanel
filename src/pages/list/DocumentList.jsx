@@ -1,7 +1,7 @@
 import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import { DocumentWidget } from "../../components/widget/DocumentWidget";
+import { DocumentWidget } from "../../components/widgets/DocumentWidget";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
 

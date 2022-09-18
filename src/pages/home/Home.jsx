@@ -1,8 +1,8 @@
 import "./home.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import AppointWidget from "../../components/widget/AppointWidget";
-import TasksWidget from "../../components/widget/TasksWidget";
+import AppointWidget from "../../components/widgets/AppointWidget";
+import TasksWidget from "../../components/widgets/TasksWidget";
 
 const Home = () => {
   return (
