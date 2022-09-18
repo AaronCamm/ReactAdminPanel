@@ -1,6 +1,6 @@
 * Navbar
-    * Notification Functionality
-    * Profile Functionality
+    * Notification Functionality & Design
+    * Profile Functionality & Design
 
 * Dashboard
     * Working appointments widget
@@ -9,3 +9,16 @@
     * Working 'My Tasks' widget
         * Functional appointments list
         * Functional add appointment button
+        
+* Functionality to add new care plan + styling
+* Functionality to add new incident + styling
+* Functionality to add new document + styling
+* Functionality to add new invoice + styling
+
+* Settings - functionality + styling
+* Signin - functionality + styling
+* Signup - functionality + styling
+
+* All single view pages need functionality and styling
+
+* Invoice generation - NDIS standard & possibly MYOB compatibility 
