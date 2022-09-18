@@ -2,8 +2,9 @@ import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import AddIcon from "@mui/icons-material/Add";
-import { Datatable } from "../../components/datatable/ParticipantsDatatable";
+import { Datatable } from "../../components/datatable/Datatable";
 import { Link } from "react-router-dom";
+import { columns } from "../../databases/participantdatabase.js";
 
 const List = () => {
   return (
@@ -26,7 +27,7 @@ const List = () => {
               </div>
               <hr />
               <div className="recordsbody">
-                <Datatable className="datatable" />
+                <Datatable db="participants" columns={columns} className="datatable" />
               </div>
             </div>
           </div>

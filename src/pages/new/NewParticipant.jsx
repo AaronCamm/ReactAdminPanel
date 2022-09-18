@@ -53,6 +53,9 @@ const NewParticipant = () => {
   ]);
 
   const handleSubmit = (event) => {
+    event.preventDefault();
+
+    //Setting form data into Firebase DB
     const db = getDatabase();
     set(ref(db, "participants/" + tableData.length), {
       id: tableData.length,
@@ -76,8 +79,9 @@ const NewParticipant = () => {
     });
   };
 
-  const [tableData, setTableData] = useState([]);
 
+  const [tableData, setTableData] = useState([]);
+  //Required to get length of database
   useEffect(() => {
     const dbRef = ref(getDatabase());
 
@@ -87,8 +91,8 @@ const NewParticipant = () => {
   }, []);
 
   const [value, setValue] = React.useState("1");
-
-  const handleChange = (event, newValue) => {
+  //This simple allows tab functionality
+  const handleChange = (newValue) => {
     setValue(newValue);
   };
 

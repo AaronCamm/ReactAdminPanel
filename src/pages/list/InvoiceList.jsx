@@ -2,8 +2,9 @@ import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import AddIcon from "@mui/icons-material/Add";
-import { Datatable } from "../../components/datatable/InvoiceDatatable";
+import { Datatable } from "../../components/datatable/Datatable";
 import { Link } from "react-router-dom";
+import { columns } from "../../databases/invoicedatabase.js";
 
 const InvoiceList = () => {
   return (
@@ -26,7 +27,7 @@ const InvoiceList = () => {
               </div>
               <hr />
               <div className="recordsbody">
-                <Datatable className="datatable" />
+                <Datatable db="invoices" columns={columns} className="datatable" />
               </div>
             </div>
           </div>

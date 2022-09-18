@@ -5,10 +5,12 @@ import { initializeApp } from "@firebase/app";
 import { set, get, getDatabase, ref, child } from "firebase/database";
 import { firebaseConfig } from "../../config";
 import "./newemployee.scss";
+import { EventRepeat } from "@mui/icons-material";
 
 const NewEmployee = () => {
   initializeApp(firebaseConfig);
   
+  //Setting accessible variables so settable in return
   const [employeeFirst, setEmployeeFirst] = useState('');
   const [employeeLast, setEmployeeLast] = useState('');
   const [emergencyContact, setEmergencyContact] = useState('');
@@ -17,6 +19,9 @@ const NewEmployee = () => {
   const [position, setPostion] = useState('');
 
   const handleSubmit = (event) => {
+    event.preventDefault();
+
+    //Connect to Firebase database and set new data from return form
     const db = getDatabase();
     set(ref(db, "employees/" + tableData.length), {
       id: tableData.length,
@@ -29,16 +34,15 @@ const NewEmployee = () => {
     });
   }
 
+  //This is just to get the length of the database
+  //The length is required to insert at the correct point in the DB
   const [tableData, setTableData] = useState([]);
-
   useEffect(() => {
     const dbRef = ref(getDatabase());
 
     get(child(dbRef, `employees`))
     .then((snapshot) => setTableData(snapshot.val()));
   }, []);
-
-  console.log(tableData.length);
 
   return (
     <div className="new">
