@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import AddIcon from "@mui/icons-material/Add";
 import { Datatable } from "../../components/datatable/Datatable";
 import { Link } from "react-router-dom";
-import { columns } from "../../databases/employeesdatabase.js";
+import { employeeColumns } from "../../columns/columnData";
 
 const List = () => {
   return (
@@ -27,7 +27,7 @@ const List = () => {
               </div>
               <hr />
               <div className="recordsbody">
-                <Datatable db="employees" columns={columns} className="datatable" />
+                <Datatable db="employees" columns={employeeColumns} className="datatable" />
               </div>
             </div>
           </div>
