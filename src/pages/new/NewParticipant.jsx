@@ -90,9 +90,9 @@ const NewParticipant = () => {
     );
   }, []);
 
-  const [value, setValue] = React.useState("1");
+  const [value, setValue] = useState("1");
   //This simple allows tab functionality
-  const handleChange = (newValue) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -327,7 +327,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [0]: e.target.value,
+                                    "0": e.target.value,
                                   }));
                                 }}
                                 required
@@ -342,7 +342,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [1]: e.target.value,
+                                    "1": e.target.value,
                                   }));
                                 }}
                               />
@@ -350,9 +350,10 @@ const NewParticipant = () => {
                             <label>
                               <select
                                 onChange={(e) => {
+                                  console.log(connections);
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [2]: e.target.value,
+                                    "2": e.target.value,
                                   }));
                                 }}
                               >
@@ -367,7 +368,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [3]: e.target.value,
+                                    "3": e.target.value,
                                   }));
                                 }}
                               >
@@ -396,7 +397,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [4]: e.target.value,
+                                    "4": e.target.value,
                                   }));
                                 }}
                               />
@@ -408,7 +409,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [5]: e.target.value,
+                                    "5": e.target.value,
                                   }));
                                 }}
                               />
@@ -418,7 +419,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [6]: e.target.value,
+                                    "6": e.target.value,
                                   }));
                                 }}
                               >
@@ -433,7 +434,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [7]: e.target.value,
+                                    "7": e.target.value,
                                   }));
                                 }}
                               >
@@ -462,7 +463,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [8]: e.target.value,
+                                    "8": e.target.value,
                                   }));
                                 }}
                               />
@@ -474,7 +475,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [9]: e.target.value,
+                                    "9": e.target.value,
                                   }));
                                 }}
                               />
@@ -484,7 +485,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [10]: e.target.value,
+                                    "10": e.target.value,
                                   }));
                                 }}
                               >
@@ -499,7 +500,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [11]: e.target.value,
+                                    "11": e.target.value,
                                   }));
                                 }}
                               >
@@ -528,7 +529,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [12]: e.target.value,
+                                    "12": e.target.value,
                                   }));
                                 }}
                               />
@@ -540,7 +541,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [13]: e.target.value,
+                                    "13": e.target.value,
                                   }));
                                 }}
                               />
@@ -550,7 +551,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [14]: e.target.value,
+                                    "14": e.target.value,
                                   }));
                                 }}
                               >
@@ -565,7 +566,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    [15]: e.target.value,
+                                    "15": e.target.value,
                                   }));
                                 }}
                               >
