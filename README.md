@@ -2,7 +2,7 @@
 
 This is a project I have started end of August. I am utilising JSX because it is recommended when working with React and I am utilising SCSS for the styling. I am new to front-end development, but these appear the better options currently. I am using Firebase as my BaaS. I have generally in the past, utilised MySQL or similar SQL database, however, Firebase looks very useful and should integrate well with React.
 
-## Completion 4/10
+## Completion 5/10
 
 I have only just started this project, but I will continue to add to it and improve it. Although my experience is with statically type coding languages (predominantly C#), I can generally manage to code in any language with a little learning.
 
@@ -17,5 +17,5 @@ The requirements list realistically isn't large. It should have a client managem
 ### `List of Things To Do`
   * [Todo](https://github.com/AaronCamm/ReactAdminPanel/blob/master/src/TODO) file lists all incomplete jobs.
 
-Live (May not be completely up-to-date): https://react-admin-panel-phi.vercel.app/
+Live: https://react-admin-panel-phi.vercel.app/
 ![image](https://user-images.githubusercontent.com/40619424/188106672-e60ed509-873e-4f33-822d-db5ea2331ca8.png)
