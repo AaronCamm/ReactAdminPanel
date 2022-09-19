@@ -14,7 +14,7 @@ export const Datatable = (props) => {
 
     get(child(dbRef, props.db))
     .then((snapshot) => setTableData(snapshot.val()));
-  }, []);
+  }, [props.db]);
 
   return (
     <div className="datatable">

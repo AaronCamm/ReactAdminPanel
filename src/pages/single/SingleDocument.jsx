@@ -8,7 +8,7 @@ export default function SingleParticipant() {
   const params = useParams();
   const app = initializeApp(firebaseConfig);
   const storage = getStorage(app);
-  const docName = params.documentname;
+  const docName = params.documentid;
 
   getDownloadURL(ref(storage, "files/" + docName))
     .then((url) => {

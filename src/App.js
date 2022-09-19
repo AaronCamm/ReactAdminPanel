@@ -11,11 +11,7 @@ import NewParticipant from "./pages/new/NewParticipant";
 import Signup from "./pages/signup/Signup";
 import Single from "./pages/single/Single";
 import Settings from "./pages/settings/Settings";
-import SingleParticipant from "./pages/single/SingleParticipant";
-import SingleCareplan from "./pages/single/SingleCareplan";
-import SingleEmployee from "./pages/single/SingleEmployee";
 import SingleDocument from "./pages/single/SingleDocument";
-import SingleIncident from "./pages/single/SingleIncident";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -31,27 +27,27 @@ function App() {
             <Route path="settings" element={<Settings/>}/>
             <Route path="employees">
               <Route index element={<EmployeeList/>}/>
-              <Route path=":employeeid" element={<SingleEmployee/>}/>
+              <Route path=":employeeid" element={<Single/>}/>
               <Route path="new" element={<NewEmployee/>}/>
             </Route>
             <Route path="participants">
               <Route index element={<ParticipantList/>}/>
-              <Route path=":participantid" element={<SingleParticipant/>}/>
+              <Route path=":participantid" element={<Single/>}/>
               <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="careplans">
               <Route index element={<CarePlanList/>}/>
-              <Route path=":careplanid" element={<SingleCareplan/>}/>
+              <Route path=":careplanid" element={<Single/>}/>
               <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="incidents">
               <Route index element={<IncidentList/>}/>
-              <Route path=":incidentid" element={<SingleIncident/>}/>
+              <Route path=":incidentid" element={<Single/>}/>
               <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="documents">
               <Route index element={<DocumentList/>}/>
-              <Route path=":documentname" element={<SingleDocument/>}/>
+              <Route path=":documentid" element={<SingleDocument/>}/>
               <Route path="new" element={<NewParticipant/>}/>
             </Route>
             <Route path="invoices">

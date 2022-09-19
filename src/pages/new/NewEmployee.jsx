@@ -5,7 +5,6 @@ import { initializeApp } from "@firebase/app";
 import { set, get, getDatabase, ref, child } from "firebase/database";
 import { firebaseConfig } from "../../config";
 import "./newemployee.scss";
-import { EventRepeat } from "@mui/icons-material";
 
 const NewEmployee = () => {
   initializeApp(firebaseConfig);

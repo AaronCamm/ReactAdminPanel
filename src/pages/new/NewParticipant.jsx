@@ -11,6 +11,7 @@ import { set, get, getDatabase, ref, child } from "firebase/database";
 import { firebaseConfig } from "../../config";
 import "./newparticipant.scss";
 import AddIcon from "@mui/icons-material/Add";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const NewParticipant = () => {
   initializeApp(firebaseConfig);
@@ -31,26 +32,7 @@ const NewParticipant = () => {
   const [goals, setGoals] = useState("");
   const [supportMe, setSupportMe] = useState("");
 
-  const [connections, setConnections] = useState([
-    {
-      0: "",
-      1: "",
-      2: "",
-      3: "",
-      4: "",
-      5: "",
-      6: "",
-      7: "",
-      8: "",
-      9: "",
-      10: "",
-      11: "",
-      12: "",
-      13: "",
-      14: "",
-      15: "",
-    },
-  ]);
+  const [connections, setConnections] = useState([{}]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -79,9 +61,8 @@ const NewParticipant = () => {
     });
   };
 
-
   const [tableData, setTableData] = useState([]);
-  //Required to get length of database
+  // to get length of database
   useEffect(() => {
     const dbRef = ref(getDatabase());
 
@@ -95,6 +76,11 @@ const NewParticipant = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const nextPage = () => {
+    console.log("Hello");
+    setValue((parseInt(value) + 1).toString());
+  }
 
   return (
     <div className="new">
@@ -146,7 +132,7 @@ const NewParticipant = () => {
                     </Box>
                     <form onSubmit={handleSubmit}>
                       <TabPanel value="1">
-                        <div className="formField">
+                        <div className="formField" >
                           <div className="firstInput">
                             <label>
                               <input
@@ -156,7 +142,6 @@ const NewParticipant = () => {
                                 onChange={(e) =>
                                   setParticipantFirst(e.target.value)
                                 }
-                                required
                               />
                             </label>
                             <label>
@@ -167,7 +152,6 @@ const NewParticipant = () => {
                                 onChange={(e) =>
                                   setParticipantLast(e.target.value)
                                 }
-                                required
                               />
                             </label>
                             <label>
@@ -178,7 +162,6 @@ const NewParticipant = () => {
                                 onChange={(e) =>
                                   setPrimaryContactName(e.target.value)
                                 }
-                                required
                               />
                             </label>
                             <label>
@@ -189,7 +172,6 @@ const NewParticipant = () => {
                                 onChange={(e) =>
                                   setPrimaryContact(e.target.value)
                                 }
-                                required
                               />
                             </label>
                           </div>
@@ -201,7 +183,6 @@ const NewParticipant = () => {
                                 placeholder="Date of Birth"
                                 value={dob}
                                 onChange={(e) => setDob(e.target.value)}
-                                required
                               />
                             </label>
                             <label>
@@ -212,7 +193,6 @@ const NewParticipant = () => {
                                 onChange={(e) =>
                                   setDisabilities(e.target.value)
                                 }
-                                required
                               />
                             </label>
                             <label>
@@ -221,7 +201,6 @@ const NewParticipant = () => {
                                 placeholder="Languages Spoken"
                                 value={languages}
                                 onChange={(e) => setLanguages(e.target.value)}
-                                required
                               />
                             </label>
                             <label>
@@ -230,7 +209,6 @@ const NewParticipant = () => {
                                 placeholder="NDIS Number"
                                 value={ndisNum}
                                 onChange={(e) => setNdisNum(e.target.value)}
-                                required
                               />
                             </label>
                           </div>
@@ -241,7 +219,7 @@ const NewParticipant = () => {
                               <select
                                 value={planType}
                                 onChange={(e) => setPlanType(e.target.value)}
-                                required
+                                
                               >
                                 <option value="planManaged">
                                   Plan Managed
@@ -259,13 +237,18 @@ const NewParticipant = () => {
                               <select
                                 value={planStatus}
                                 onChange={(e) => setPlanStatus(e.target.value)}
-                                required
+                                
                               >
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                               </select>
                             </label>
                           </div>
+                        </div>
+                        <div className="addDiv">
+                          <button type="submit" className="nextField" onClick={nextPage}>
+                            Next <ArrowForwardIcon />
+                          </button>
                         </div>
                       </TabPanel>
                       <TabPanel value="2">
@@ -278,7 +261,6 @@ const NewParticipant = () => {
                                 placeholder="Likes & Interests"
                                 value={likes}
                                 onChange={(e) => setLikes(e.target.value)}
-                                required
                               />
                             </label>
                             <label>
@@ -288,7 +270,6 @@ const NewParticipant = () => {
                                 placeholder="Dislikes"
                                 value={dislikes}
                                 onChange={(e) => setDislikes(e.target.value)}
-                                required
                               />
                             </label>
                           </div>
@@ -301,7 +282,6 @@ const NewParticipant = () => {
                                 placeholder="Goals"
                                 value={goals}
                                 onChange={(e) => setGoals(e.target.value)}
-                                required
                               />
                             </label>
                             <label>
@@ -311,10 +291,14 @@ const NewParticipant = () => {
                                 placeholder="How To Support Me"
                                 value={supportMe}
                                 onChange={(e) => setSupportMe(e.target.value)}
-                                required
                               />
                             </label>
                           </div>
+                        </div>
+                        <div className="addDiv">
+                          <button type="submit" className="nextField" onClick={nextPage}>
+                            Next <ArrowForwardIcon />
+                          </button>
                         </div>
                       </TabPanel>
                       <TabPanel value="3">
@@ -327,11 +311,15 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "0": e.target.value,
+                                    0: { ...arr[0], name: e.target.value },
                                   }));
                                 }}
-                                required
-                                onInvalid={(e) => e.target.setCustomValidity('Please provide at least one contact')}
+                                
+                                onInvalid={(e) =>
+                                  e.target.setCustomValidity(
+                                    "Please provide at least one contact"
+                                  )
+                                }
                                 onInput={(e) => e.target.setCustomValidity("")}
                               />
                             </label>
@@ -342,7 +330,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "1": e.target.value,
+                                    0: { ...arr[0], info: e.target.value },
                                   }));
                                 }}
                               />
@@ -350,14 +338,13 @@ const NewParticipant = () => {
                             <label>
                               <select
                                 onChange={(e) => {
-                                  console.log(connections);
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "2": e.target.value,
+                                    0: { ...arr[0], method: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="landLine">Landline</option>
                                 <option value="mobile">Mobile</option>
                                 <option value="email">Email</option>
@@ -368,11 +355,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "3": e.target.value,
+                                    0: { ...arr[0], type: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="emergency">
                                   Emergency Contact
                                 </option>
@@ -397,7 +384,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "4": e.target.value,
+                                    1: { ...arr[1], name: e.target.value },
                                   }));
                                 }}
                               />
@@ -409,7 +396,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "5": e.target.value,
+                                    1: { ...arr[1], info: e.target.value },
                                   }));
                                 }}
                               />
@@ -419,11 +406,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "6": e.target.value,
+                                    1: { ...arr[1], method: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="landLine">Landline</option>
                                 <option value="mobile">Mobile</option>
                                 <option value="email">Email</option>
@@ -434,11 +421,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "7": e.target.value,
+                                    1: { ...arr[1], type: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="emergency">
                                   Emergency Contact
                                 </option>
@@ -463,7 +450,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "8": e.target.value,
+                                    2: { ...arr[2], name: e.target.value },
                                   }));
                                 }}
                               />
@@ -475,7 +462,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "9": e.target.value,
+                                    2: { ...arr[2], info: e.target.value },
                                   }));
                                 }}
                               />
@@ -485,11 +472,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "10": e.target.value,
+                                    2: { ...arr[2], method: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="landLine">Landline</option>
                                 <option value="mobile">Mobile</option>
                                 <option value="email">Email</option>
@@ -500,11 +487,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "11": e.target.value,
+                                    2: { ...arr[2], type: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="emergency">
                                   Emergency Contact
                                 </option>
@@ -529,7 +516,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "12": e.target.value,
+                                    3: { ...arr[3], name: e.target.value },
                                   }));
                                 }}
                               />
@@ -541,7 +528,7 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "13": e.target.value,
+                                    3: { ...arr[3], info: e.target.value },
                                   }));
                                 }}
                               />
@@ -551,11 +538,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "14": e.target.value,
+                                    3: { ...arr[3], method: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="landLine">Landline</option>
                                 <option value="mobile">Mobile</option>
                                 <option value="email">Email</option>
@@ -566,11 +553,11 @@ const NewParticipant = () => {
                                 onChange={(e) => {
                                   setConnections((arr) => ({
                                     ...arr,
-                                    "15": e.target.value,
+                                    3: { ...arr[3], type: e.target.value },
                                   }));
                                 }}
                               >
-                                <option/>
+                                <option />
                                 <option value="emergency">
                                   Emergency Contact
                                 </option>
@@ -587,12 +574,12 @@ const NewParticipant = () => {
                             </label>
                           </div>
                         </div>
+                        <div className="addDiv">
+                          <button type="submit" className="nextField" onSubmit={handleSubmit}>
+                            Add <AddIcon />
+                          </button>
+                        </div>
                       </TabPanel>
-                      <div className="addDiv">
-                        <button type="submit" className="addParticipant">
-                          Add <AddIcon />
-                        </button>
-                      </div>
                     </form>
                   </TabContext>
                 </Box>

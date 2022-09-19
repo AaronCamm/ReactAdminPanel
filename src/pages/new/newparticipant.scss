@@ -102,10 +102,10 @@ Blue: #1976d2
           display: flex;
           justify-content: space-around;
 
-          .addParticipant {
+          .addParticipant, .nextField {
             display: flex;
             justify-content: center;
-            margin-top: 5vh;
+            margin-top: 8vh;
             width: 11vh;
             height: 4vh;
             border-radius: 5%;
