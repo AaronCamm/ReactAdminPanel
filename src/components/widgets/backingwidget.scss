@@ -12,6 +12,7 @@
   border: 3px;
   box-sizing: border-box;
   .widget {
+    min-width: 115px;
     position: relative;
     background-color: white;
     display: flex;

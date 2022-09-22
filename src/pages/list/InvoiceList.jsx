@@ -15,19 +15,25 @@ const InvoiceList = () => {
         <div className="bodyContainer">
           <div className="backing">
             <div className="widget">
-              <div className="topbar">
-                <div className="recordstext">
-                  <span>Invoices</span>
-                </div>
-                <Link to="/invoices/new">
-                  <div className="addicon">
-                    <AddIcon />
+              <div className="records">
+                <div className="topbar">
+                  <div className="recordstext">
+                    <span>Invoices</span>
                   </div>
-                </Link>
-              </div>
-              <hr />
-              <div className="recordsbody">
-                <Datatable db="invoices" columns={invoiceColumns} className="datatable" />
+                  <Link to="/invoices/new">
+                    <div className="addicon">
+                      <AddIcon />
+                    </div>
+                  </Link>
+                </div>
+                <hr />
+                <div className="recordsbody">
+                  <Datatable
+                    db="invoices"
+                    columns={invoiceColumns}
+                    className="datatable"
+                  />
+                </div>
               </div>
             </div>
           </div>

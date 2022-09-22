@@ -15,19 +15,25 @@ const List = () => {
         <div className="bodyContainer">
           <div className="backing">
             <div className="widget">
-              <div className="topbar">
-                <div className="recordstext">
-                  <span>Participant Records</span>
-                </div>
-                <Link to="/participants/new">
-                  <div className="addicon">
-                    <AddIcon />
+              <div className="records">
+                <div className="topbar">
+                  <div className="recordstext">
+                    <span>Participant Records</span>
                   </div>
-                </Link>
-              </div>
-              <hr />
-              <div className="recordsbody">
-                <Datatable db="participants" columns={participantColumns} className="datatable" />
+                  <Link to="/participants/new">
+                    <div className="addicon">
+                      <AddIcon />
+                    </div>
+                  </Link>
+                </div>
+                <hr />
+                <div className="recordsbody">
+                  <Datatable
+                    db="participants"
+                    columns={participantColumns}
+                    className="datatable"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -15,19 +15,25 @@ const CarePlanList = () => {
         <div className="bodyContainer">
           <div className="backing">
             <div className="widget">
-              <div className="topbar">
-                <div className="recordstext">
-                  <span>Incidents</span>
-                </div>
-                <Link to="/incidents/new">
-                  <div className="addicon">
-                    <AddIcon />
+              <div className="records">
+                <div className="topbar">
+                  <div className="recordstext">
+                    <span>Incidents</span>
                   </div>
-                </Link>
-              </div>
-              <hr />
-              <div className="recordsbody">
-                <Datatable db="incidents" columns={incidentColumns} className="datatable" />
+                  <Link to="/incidents/new">
+                    <div className="addicon">
+                      <AddIcon />
+                    </div>
+                  </Link>
+                </div>
+                <hr />
+                <div className="recordsbody">
+                  <Datatable
+                    db="incidents"
+                    columns={incidentColumns}
+                    className="datatable"
+                  />
+                </div>
               </div>
             </div>
           </div>

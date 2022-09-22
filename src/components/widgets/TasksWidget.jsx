@@ -7,16 +7,16 @@ const Widget = () => {
     <div className="backing">
       <div className="widget">
         <div className="tasks">
-          <div className="taskstext">
-            <span>My Tasks</span>
-          </div>
-          <div className="addicon">
-            <AddIcon />
+          <div className="taskhead">
+            <div className="taskstext">
+              <span>My Tasks</span>
+            </div>
+            <div className="addicon">
+              <AddIcon />
+            </div>
           </div>
           <hr />
-          <div className="tasksbody">
-            Body
-          </div>
+          <div className="tasksbody">Body</div>
         </div>
       </div>
     </div>

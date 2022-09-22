@@ -4,50 +4,53 @@
 
   .listContainer {
     flex: 11;
+    flex-direction: column;
     height: 80px;
 
     .bodyContainer {
       display: flex;
+      flex: 1;
       padding: 20px;
       gap: 20px;
 
-      .topbar {
-        position: absolute;
-        width: 170vh;
+      .records {
         display: flex;
-        justify-content: space-between;
+        flex: 1;
+        flex-direction: column;
 
-        span, .addicon {
+        .topbar {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          span,
+          .addicon {
             display: flex;
-            justify-content: center;
+            flex: 1;
             letter-spacing: 1px;
             color: rgb(0, 134, 187);
             font-weight: 500;
           }
 
-        .addicon{
+          .addicon {
             cursor: pointer;
+          }
         }
-      }
 
-      .recordsbody {
-        display: flex;
-        flex: 1;
-        margin-top: 80px;
-
-        .datatable {
+        .recordsbody {
           display: flex;
           flex: 1;
-        }
-      }
+          height: 50vh;
 
-      hr {
-        display: flex;
-        position: absolute;
-        width: 100%;
-        margin-top: 40px;
-        margin-left: -20.6px;
-        border: 0.2px solid rgb(214, 214, 214);
+          .datatable {
+            display: flex;
+            flex: 1;
+          }
+        }
+
+        hr {
+          display: flex;
+        }
       }
     }
   }
