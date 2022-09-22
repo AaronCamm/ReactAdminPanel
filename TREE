@@ -11,6 +11,8 @@
 └─ src
    ├─ App.js
    ├─ TODO
+   ├─ columns
+   │  └─ columnData.js
    ├─ components
    │  ├─ datatable
    │  │  ├─ Datatable.jsx
@@ -21,7 +23,7 @@
    │  ├─ sidebar
    │  │  ├─ Sidebar.jsx
    │  │  └─ sidebar.scss
-   │  └─ widget
+   │  └─ widgets
    │     ├─ AppointWidget.jsx
    │     ├─ DocumentWidget.jsx
    │     ├─ TasksWidget.jsx
@@ -29,12 +31,6 @@
    │     ├─ backingwidget.scss
    │     └─ taskswidget.scss
    ├─ config.js
-   ├─ databases
-   │  ├─ careplandatabase.js
-   │  ├─ employeesdatabase.js
-   │  ├─ incidentdatabase.js
-   │  ├─ invoicedatabase.js
-   │  └─ participantdatabase.js
    ├─ img
    │  ├─ Logo-NoIcon.png
    │  └─ bssicon.png
@@ -67,10 +63,6 @@
       │  └─ signup.scss
       └─ single
          ├─ Single.jsx
-         ├─ SingleCareplan.jsx
          ├─ SingleDocument.jsx
-         ├─ SingleEmployee.jsx
-         ├─ SingleIncident.jsx
-         ├─ SingleParticipant.jsx
          └─ single.scss
 ```
