@@ -31,24 +31,33 @@
 
   .appointbody {
     display: flex;
-    width: 50vh;
+    flex-direction: column;
 
     .appointEntry {
       display: flex;
-      height: 7vh;
-      width: 50vh;
+      align-items: center;
 
-      .appointNameDate {
+      .dataText {
         display: flex;
-        margin-left: 10px;
-        font-size: 13px;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      .appointNameDate, .appointAddress {
+        margin-left: 3vh;
+        font-size: 14px;
       }
       .appointAddress {
-        display: flex;
-        margin-left: 10px;
-        font-size: 13px;
         font-weight: 500;
       }
+      .accountIcon {
+        display: flex;
+        font-size: 40px;
+      }
+    }
+
+    .dataBreak {
+      border-style: dashed;
     }
   }
 }

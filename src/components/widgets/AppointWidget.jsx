@@ -38,9 +38,8 @@ const Widget = () => {
               return (
                 <div>
                   <div className="appointEntry">
-                    <div>
-                      <AccountBoxIcon />
-                      <p>DONT LOOK HERE BLUE THIS IS STILL IN TESTING, PLEASE DON'T JUDGE THIS :((((</p>
+                    <AccountBoxIcon className="accountIcon" />
+                    <div className="dataText">
                       <p className="appointNameDate">
                         {data.participantName} - {data.date} from {data.period}
                       </p>
@@ -49,7 +48,7 @@ const Widget = () => {
                       </p>
                     </div>
                   </div>
-                  <br />
+                  <hr className="dataBreak"/>
                 </div>
               );
             })}

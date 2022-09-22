@@ -25,6 +25,7 @@ function App() {
             <Route path="signin" element={<Signin/>}/>
             <Route path="signup" element={<Signup/>}/>
             <Route path="settings" element={<Settings/>}/>
+            <Route path="profile" element={<Single/>}/>
             <Route path="employees">
               <Route index element={<EmployeeList/>}/>
               <Route path=":employeeid" element={<Single/>}/>

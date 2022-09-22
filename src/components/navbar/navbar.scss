@@ -26,20 +26,7 @@
         position: relative;
 
         &:hover{
-            -webkit-animation: bounce .3s infinite alternate;
-            -moz-animation: bounce .3s infinite alternate;
-            animation: bounce .3s infinite alternate;
             color: rgb(65, 88, 90);
-          }
-                    
-          @-webkit-keyframes bounce {
-            to { -webkit-transform: scale(1.2); }
-          }
-          @-moz-keyframes bounce {
-            to { -moz-transform: scale(1.2); }
-          }
-          @keyframes bounce {
-            to { transform: scale(1.2); }
           }
 
         .icon {
@@ -69,11 +56,6 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        transition: all .2s ease-in-out;
-        
-        &:hover { 
-          transform: scale(1.1);
-        }
       }
     }
   }
