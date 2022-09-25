@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+    align-items: center;
 
     span,
     .addicon {
@@ -16,17 +17,18 @@
       font-weight: 500;
     }
     .addicon {
+      height: 75%;
       &:hover {
         cursor: pointer;
       }
     }
   }
 
-  hr {
+  .topBar {
     display: flex;
     flex: 1;
     width: 100%;
-    border: 0.2px solid rgb(214, 214, 214);
+    margin-left: -1vh;
   }
 
   .appointbody {
@@ -43,7 +45,8 @@
         flex-direction: column;
       }
 
-      .appointNameDate, .appointAddress {
+      .appointNameDate,
+      .appointAddress {
         margin-left: 3vh;
         font-size: 14px;
       }
@@ -57,7 +60,12 @@
     }
 
     .dataBreak {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      color: rgb(214, 214, 214);
       border-style: dashed;
+      margin-left: -1vh;
     }
   }
 }

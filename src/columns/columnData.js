@@ -264,3 +264,43 @@ export const participantColumns = [
     },
   },
 ];
+
+export const taskColumns = [
+  {
+    field: "dueDate",
+    headerName: "Due Date",
+    width: 120,
+  },
+  {
+    field: "description",
+    headerName: "Description",
+    width: 250,
+  },
+  {
+    field: "clientName",
+    headerName: "Client",
+    width: 150,
+  },
+  {
+    field: "assigned",
+    headerName: "Assigned",
+    width: 150,
+  },
+  {
+    field: "view",
+    headerName: "View",
+    width: 115,
+    renderCell: (params) => {
+      return (
+        <div className="iconImg">
+          <Link
+            to={"/tasks/" + params.row.id}
+            db={"tasks/" + params.row.id}
+          >
+            <VisibilityIcon />
+          </Link>
+        </div>
+      );
+    },
+  },
+];

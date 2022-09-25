@@ -8,16 +8,21 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+    align-items: center;
+
+    .taskstext {
+      display: flex;
+      flex-shrink: 0;
+    }
 
     span,
     .addicon {
-      display: flex;
-      flex: none;
       letter-spacing: 1px;
       color: rgb(0, 134, 187);
       font-weight: 500;
     }
     .addicon {
+      height: 75%;
       &:hover {
         cursor: pointer;
       }
@@ -28,14 +33,23 @@
     display: flex;
     flex: 1;
     width: 100%;
-    border: 0.2px solid rgb(214, 214, 214);
   }
 
   .tasksbody {
-    position: absolute;
-    margin-top: 50px;
     display: flex;
     flex: 1;
+
+    .recordsbody {
+      display: flex;
+      flex: 1;
+      height: 65vh;
+
+      .datatable {
+        display: flex;
+        flex: 1;
+        width: 50vh;
+      }
+    }
   }
 
   .search {

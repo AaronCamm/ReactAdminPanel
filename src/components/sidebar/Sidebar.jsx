@@ -10,6 +10,8 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 
+import { Link } from "react-router-dom";
+
 export const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -18,54 +20,54 @@ export const Sidebar = () => {
       </div>
       <div className="centre">
         <ul>
-          <a href="/">
+          <Link to="/">
             <li>
               <HomeIcon className="icon" />
               <span>Dashboard</span>
             </li>
-          </a>
-          <a href="/participants">
+          </Link>
+          <Link to="/participants">
             <li>
               <PeopleIcon className="icon" />
               <span>Participants</span>
             </li>
-          </a>
-          <a href="/careplans">
+          </Link>
+          <Link to="/careplans">
             <li>
               <TopicIcon className="icon" />
               <span>Care Plans</span>
             </li>
-          </a>
-          <a href="/incidents">
+          </Link>
+          <Link to="/incidents">
             <li>
               <AssignmentLateIcon className="icon" />
               <span>Incidents</span>
             </li>
-          </a>
-          <a href="/employees">
+          </Link>
+          <Link to="/employees">
             <li>
               <BadgeIcon className="icon" />
               <span>Employees</span>
             </li>
-          </a>
-          <a href="/documents">
+          </Link>
+          <Link to="/documents">
             <li>
               <AutoStoriesIcon className="icon" />
               <span>Documents</span>
             </li>
-          </a>
-          <a href="/invoices">
+          </Link>
+          <Link to="/invoices">
             <li>
               <ReceiptIcon className="icon" />
               <span>Invoices</span>
             </li>
-          </a>
-          <a href="/settings">
+          </Link>
+          <Link to="/settings">
             <li>
               <SettingsIcon className="icon" />
               <span>Settings</span>
             </li>
-          </a>
+          </Link>
         </ul>
       </div>
     </div>

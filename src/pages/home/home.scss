@@ -3,13 +3,19 @@
     display: flex;
 
     .homeContainer{
-        flex: 11;
+        display: flex;
+        flex: 1;
         height: 80px;
 
         .widgets{
             display: flex;
-            padding: 20px;
+            flex: 1;
             gap: 20px;
+            height: 70vh;
+
+            .breaker {
+                display: flex;
+            }
         }
     }
 }

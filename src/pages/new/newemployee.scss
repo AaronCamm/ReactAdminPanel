@@ -1,4 +1,4 @@
-.new {
+.newEmployee {
   flex: 1;
   display: flex;
 
@@ -8,59 +8,50 @@
 
     .bodyContainer {
       display: flex;
+      flex-direction: column;
       padding: 20px;
       gap: 20px;
 
       .topbar {
         width: 500px;
         position: absolute;
-        margin-left: 60vh;
 
-        h3{
-            margin-left: 10vh;
+        h3 {
+          margin-left: 10vh;
         }
-        .form-control-name{
-            margin-left: 24px;
-            width: 300px;
+        .form-control-name {
+          margin-left: 24px;
+          width: 300px;
         }
-        .form-control-position{
-            margin-left: 10px;
-            width: 300px;
+        .form-control-position {
+          margin-left: 10px;
+          width: 300px;
         }
-        .form-group{
-            margin-bottom: 5px;
+        .form-group {
+          margin-bottom: 5px;
         }
-        .form-check-input{
-            margin-left: -3px;
+        .form-check-input {
+          margin-left: -3px;
         }
 
-        span,
-        .addicon {
+        span {
           display: flex;
           justify-content: center;
           letter-spacing: 1px;
           color: rgb(0, 134, 187);
           font-weight: 500;
         }
-
-        .addicon {
-          cursor: pointer;
-        }
       }
 
       .recordsbody {
         display: flex;
         flex: 1;
-        margin-top: 130px;
       }
 
       hr {
         display: flex;
-        position: absolute;
-        width: 100%;
+        width: 171vh;
         margin-top: 40px;
-        margin-left: -20.6px;
-        border: 0.2px solid rgb(214, 214, 214);
       }
       .search {
         display: flex;

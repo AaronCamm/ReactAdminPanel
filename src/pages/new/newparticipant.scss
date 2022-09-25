@@ -2,37 +2,51 @@
 Blue: #1976d2
 */
 
-.new {
+.newParticipant {
   flex: 1;
   display: flex;
+  margin-left: -20px;
+  margin-top: -20px;
 
   .newContainer {
+    display: flex;
+    flex: 1;
     height: 80px;
 
     .bodyContainer {
       display: flex;
+      flex: 1;
       padding: 20px;
       gap: 20px;
+      flex-direction: column;
+
+      hr {
+        width: 100%;
+      }
+
+      span {
+        display: flex;
+        flex: 1;
+        letter-spacing: 1px;
+        color: rgb(0, 134, 187);
+        font-weight: 500;
+      }
 
       .topbar {
-        position: absolute;
-        width: 110vh;
         display: flex;
-        justify-content: space-between;
-
-        span {
-          display: flex;
-          margin-left: -106vh;
-          letter-spacing: 1px;
-          color: rgb(0, 134, 187);
-          font-weight: 500;
-        }
+        width: 100%;
+        flex: 1;
+        margin-bottom: -1vh;
       }
 
       .recordsbody {
         display: flex;
-        flex-direction: column;
-        margin-top: 80px;
+        flex: 1;
+        justify-content: space-around;
+
+        .tabPanel {
+          height: 50vh;
+        }
 
         .textArea {
           min-width: 70vh;
@@ -58,12 +72,13 @@ Blue: #1976d2
 
         ::-webkit-input-placeholder {
           font-style: italic;
-       }
+        }
 
         .tabList {
           display: flex;
           justify-items: space-around;
           width: 50vh;
+          flex: 1;
         }
 
         label {
@@ -101,11 +116,14 @@ Blue: #1976d2
         .addDiv {
           display: flex;
           justify-content: space-around;
+          padding: 3vh;
+          flex-shrink: 3;
 
-          .addParticipant, .nextField {
+          .addParticipant,
+          .nextField {
             display: flex;
             justify-content: center;
-            margin-top: 8vh;
+            margin: 6vh;
             width: 11vh;
             height: 4vh;
             border-radius: 5%;
@@ -121,15 +139,6 @@ Blue: #1976d2
             }
           }
         }
-      }
-
-      hr {
-        display: flex;
-        position: absolute;
-        width: 100%;
-        margin-top: 40px;
-        margin-left: -20.6px;
-        border: 0.2px solid rgb(214, 214, 214);
       }
     }
   }
