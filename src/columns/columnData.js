@@ -274,7 +274,7 @@ export const taskColumns = [
   {
     field: "description",
     headerName: "Description",
-    width: 250,
+    width: 270,
   },
   {
     field: "clientName",
@@ -289,10 +289,12 @@ export const taskColumns = [
   {
     field: "view",
     headerName: "View",
-    width: 115,
+    width: 100,
+    sortable: false,
+    disableColumnMenu: true,
     renderCell: (params) => {
       return (
-        <div className="iconImg">
+        <div className="iconImg" >
           <Link
             to={"/tasks/" + params.row.id}
             db={"tasks/" + params.row.id}
