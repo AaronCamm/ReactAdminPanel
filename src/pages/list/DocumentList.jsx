@@ -1,7 +1,7 @@
-import "./list.scss";
-import { DocumentWidget } from "../../components/widgets/DocumentWidget";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
+import { DocumentWidget } from "../../components/widgets/DocumentWidget";
+import "./List.scss";
 
 const List = () => {
   return (

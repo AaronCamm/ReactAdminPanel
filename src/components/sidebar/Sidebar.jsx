@@ -1,14 +1,15 @@
-import "./sidebar.scss";
 import logo from "../../img/bssicon.png";
+import "./Sidebar.scss";
 
-import HomeIcon from "@mui/icons-material/Home";
-import PeopleIcon from "@mui/icons-material/People";
-import TopicIcon from "@mui/icons-material/Topic";
 import AssignmentLateIcon from "@mui/icons-material/AssignmentLate";
-import BadgeIcon from "@mui/icons-material/Badge";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import SettingsIcon from "@mui/icons-material/Settings";
+import BadgeIcon from "@mui/icons-material/Badge";
+import HomeIcon from "@mui/icons-material/Home";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PeopleIcon from "@mui/icons-material/People";
 import ReceiptIcon from "@mui/icons-material/Receipt";
+import SettingsIcon from "@mui/icons-material/Settings";
+import TopicIcon from "@mui/icons-material/Topic";
 
 import { Link } from "react-router-dom";
 
@@ -20,7 +21,7 @@ export const Sidebar = () => {
       </div>
       <div className="centre">
         <ul>
-          <Link to="/">
+          <Link to="/dashboard">
             <li>
               <HomeIcon className="icon" />
               <span>Dashboard</span>
@@ -66,6 +67,12 @@ export const Sidebar = () => {
             <li>
               <SettingsIcon className="icon" />
               <span>Settings</span>
+            </li>
+          </Link>
+          <Link to="/logout">
+            <li>
+              <LogoutIcon className="icon" />
+              <span>Logout</span>
             </li>
           </Link>
         </ul>

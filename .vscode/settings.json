@@ -1,0 +1,82 @@
+{
+  // Auto Save
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.organizeImports": true },
+
+  // File Nesting
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js, ${capture}.css, ${capture}.scss",
+    "*.tsx": "${capture}.ts, ${capture}.css, ${capture}.scss",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.sortOrder": "foldersNestsFiles",
+
+  // Formatters
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 🧶 Other
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "*.env": true,
+    "**/node_modules": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.bracketPairColorization.enabled": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.activityBar.visible": false,
+  "prettier.useEditorConfig": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "envKeys",
+        "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+        "settings": {
+          "foreground": "#19354900"
+        }
+      }
+    ]
+  },
+  "cloak.environmentKeys": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+  "cloak.environmentComments": "comment.line.number-sign.env",
+  "files.associations": {
+    ".env": "dotenv"
+  },
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "editor.stickyScroll.enabled": true
+}

@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+}
+.parentContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgb(209, 252, 255);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 336px;
+    min-height: 336px;
+
+    background-color: white;
+    height: 50vh;
+    width: 50vh;
+    margin-top: 25vh;
+
+    .formField {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+
+      input {
+        display: flex;
+        flex: 1;
+        padding: 5px;
+        margin: 5px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+
+        &:hover {
+          border-color: rgb(50, 184, 247);
+        }
+      }
+
+      .button {
+        justify-content: center;
+        border-bottom: none;
+        background-image: linear-gradient(
+          to right,
+          rgb(243, 243, 243),
+          rgb(0, 217, 255)
+        );
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .logoContainer {
+      display: flex;
+      margin-bottom: 3vh;
+
+      .logo {
+        display: flex;
+        flex: 1;
+        height: 8vh;
+      }
+    }
+
+    .getStarted {
+      display: flex;
+      font-weight: 600;
+      margin-bottom: -2vh;
+    }
+    .loginMessage {
+      margin: 15px;
+      font-size: 13px;
+    }
+
+    .forgotPassword {
+      display: flex;
+      width: 91%;
+      justify-content: flex-end;
+
+      font-size: 14px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

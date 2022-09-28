@@ -1,6 +1,6 @@
-import "./navbar.scss";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LogoNoIcon from "../../img/Logo-NoIcon.png";
+import "./Navbar.scss";
 
 const Navbar = () => {
   return (
@@ -21,7 +21,9 @@ const Navbar = () => {
             src="https://st2.depositphotos.com/3695509/5337/i/450/depositphotos_53376063-stock-photo-portrait-of-a-tattooed-male.jpg"
             alt="Profile Avatar"
             className="avatar"
-            onClick={() => {window.location.href = "/employees/0"}}
+            onClick={() => {
+              window.location.href = "/employees/0";
+            }}
           />
         </div>
       </div>

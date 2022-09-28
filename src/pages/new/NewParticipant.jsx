@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
+import { initializeApp } from "@firebase/app";
+import AddIcon from "@mui/icons-material/Add";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import { initializeApp } from "@firebase/app";
-import { set, get, getDatabase, ref, child } from "firebase/database";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import { child, get, getDatabase, ref, set } from "firebase/database";
+import React, { useEffect, useState } from "react";
 import { firebaseConfig } from "../../config";
-import "./newparticipant.scss";
-import AddIcon from "@mui/icons-material/Add";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import "./NewParticipant.scss";
 
 const NewParticipant = () => {
   initializeApp(firebaseConfig);

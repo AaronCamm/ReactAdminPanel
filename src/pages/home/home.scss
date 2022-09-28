@@ -1,21 +1,21 @@
 .home {
-    flex: 1;
+  flex: 1;
+  display: flex;
+
+  .homeContainer {
     display: flex;
+    flex: 1;
+    height: 80px;
 
-    .homeContainer{
+    .widgets {
+      display: flex;
+      flex: 1;
+      gap: 20px;
+      height: 70vh;
+
+      .breaker {
         display: flex;
-        flex: 1;
-        height: 80px;
-
-        .widgets{
-            display: flex;
-            flex: 1;
-            gap: 20px;
-            height: 70vh;
-
-            .breaker {
-                display: flex;
-            }
-        }
+      }
     }
+  }
 }

@@ -25,29 +25,29 @@
         cursor: pointer;
         position: relative;
 
-        &:hover{
-            color: rgb(65, 88, 90);
-          }
+        &:hover {
+          color: rgb(65, 88, 90);
+        }
 
         .icon {
           align-items: flex-end;
         }
 
         .counter {
-            width: 15px;
-            height: 15px;
-            background-color: rgb(60, 186, 228);
-            border-radius: 50%;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: bold;
-            position: absolute;
-            top: 5px;
-            right: -5px;
-          }
+          width: 15px;
+          height: 15px;
+          background-color: rgb(60, 186, 228);
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: 5px;
+          right: -5px;
+        }
       }
       .avatar {
         cursor: pointer;
@@ -67,7 +67,7 @@
     padding-top: 80px;
   }
 
-  .space{
+  .space {
     display: flex;
     flex: 7;
     justify-content: space-between;

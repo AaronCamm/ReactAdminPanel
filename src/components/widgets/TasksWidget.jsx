@@ -1,8 +1,8 @@
-import "./taskswidget.scss";
-import "./backingwidget.scss";
 import AddIcon from "@mui/icons-material/Add";
-import { Datatable } from "../datatable/Datatable";
 import { taskColumns } from "../../columns/columnData";
+import { Datatable } from "../datatable/Datatable";
+import "./BackingWidget.scss";
+import "./TasksWidget.scss";
 
 const Widget = () => {
   return (
@@ -18,11 +18,7 @@ const Widget = () => {
       <hr />
       <div className="tasksbody">
         <div className="recordsbody">
-          <Datatable
-            db="tasks"
-            columns={taskColumns}
-            className="datatable"
-          />
+          <Datatable db="tasks" columns={taskColumns} className="datatable" />
         </div>
       </div>
     </div>

@@ -254,9 +254,7 @@ export const participantColumns = [
     renderCell: (params) => {
       return (
         <div className="iconImg">
-          <Link
-            to={"/participants/" + params.row.id}
-          >
+          <Link to={"/participants/" + params.row.id}>
             <VisibilityIcon />
           </Link>
         </div>
@@ -294,11 +292,8 @@ export const taskColumns = [
     disableColumnMenu: true,
     renderCell: (params) => {
       return (
-        <div className="iconImg" >
-          <Link
-            to={"/tasks/" + params.row.id}
-            db={"tasks/" + params.row.id}
-          >
+        <div className="iconImg">
+          <Link to={"/tasks/" + params.row.id} db={"tasks/" + params.row.id}>
             <VisibilityIcon />
           </Link>
         </div>

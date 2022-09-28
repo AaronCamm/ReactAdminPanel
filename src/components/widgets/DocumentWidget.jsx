@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
 import { initializeApp } from "@firebase/app";
-import { getStorage, ref, listAll } from "firebase/storage";
-import { firebaseConfig } from "../../config";
-import { DataGrid } from "@mui/x-data-grid";
 import DownloadIcon from "@mui/icons-material/Download";
+import { DataGrid } from "@mui/x-data-grid";
+import { getStorage, listAll, ref } from "firebase/storage";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../datatable/datatable.scss";
+import { firebaseConfig } from "../../config";
+import "../datatable/Datatable.scss";
 
 export const DocumentWidget = () => {
   const [refData, setRef] = useState([]);
@@ -22,7 +22,7 @@ export const DocumentWidget = () => {
         res.items.forEach((itemRef) => {
           myArray[counter] = {
             id: counter,
-            documentName: itemRef.name
+            documentName: itemRef.name,
           };
           counter++;
         });
@@ -51,7 +51,9 @@ export const DocumentWidget = () => {
             renderCell: (params) => {
               return (
                 <div className="iconImg">
-                  <Link to={"/documents/" + refData[params.row.id].documentName}>
+                  <Link
+                    to={"/documents/" + refData[params.row.id].documentName}
+                  >
                     <DownloadIcon />
                   </Link>
                 </div>

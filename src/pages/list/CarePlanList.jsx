@@ -1,8 +1,8 @@
-import "./list.scss";
 import AddIcon from "@mui/icons-material/Add";
-import { Datatable } from "../../components/datatable/Datatable";
 import { Link } from "react-router-dom";
 import { careplanColumns } from "../../columns/columnData";
+import { Datatable } from "../../components/datatable/Datatable";
+import "./List.scss";
 
 const CarePlanList = () => {
   return (

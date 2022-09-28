@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
 import { initializeApp } from "@firebase/app";
-import { set, get, getDatabase, ref, child } from "firebase/database";
+import { child, get, getDatabase, ref, set } from "firebase/database";
+import React, { useEffect, useState } from "react";
 import { firebaseConfig } from "../../config";
-import "./newemployee.scss";
+import "./NewEmployee.scss";
 
 const NewEmployee = () => {
   initializeApp(firebaseConfig);

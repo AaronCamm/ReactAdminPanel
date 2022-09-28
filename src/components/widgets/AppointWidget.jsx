@@ -1,11 +1,11 @@
-import "./appointwidget.scss";
-import "./backingwidget.scss";
-import AddIcon from "@mui/icons-material/Add";
-import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import { useState, useEffect } from "react";
 import { initializeApp } from "@firebase/app";
-import { get, getDatabase, ref, child } from "firebase/database";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import AddIcon from "@mui/icons-material/Add";
+import { child, get, getDatabase, ref } from "firebase/database";
+import { useEffect, useState } from "react";
 import { firebaseConfig } from "../../config";
+import "./AppointWidget.scss";
+import "./BackingWidget.scss";
 
 const Widget = () => {
   const [appointmentData, setAppointmentData] = useState([]);
@@ -29,7 +29,7 @@ const Widget = () => {
           <AddIcon />
         </div>
       </div>
-      <hr className="topBar"/>
+      <hr className="topBar" />
       <div className="appointbody">
         {appointmentData.map((data) => {
           return (

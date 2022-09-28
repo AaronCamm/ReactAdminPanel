@@ -1,6 +1,6 @@
-import "./home.scss";
 import AppointWidget from "../../components/widgets/AppointWidget";
 import TasksWidget from "../../components/widgets/TasksWidget";
+import "./Home.scss";
 
 const Home = () => {
   return (
