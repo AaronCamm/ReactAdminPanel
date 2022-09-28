@@ -72,7 +72,7 @@ const Signup = () => {
           />
           <input
             type="button"
-            value="Login"
+            value="Signup"
             className="button"
             onClick={function () {
               if (password === confirmPassword) {

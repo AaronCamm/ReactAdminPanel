@@ -70,9 +70,14 @@ const Signin = () => {
             }
           />
         </form>
-        <a href="/forgotpassword" className="forgotPassword">
-          <p>Forgot password</p>
-        </a>
+        <div className="forgotPassword">
+          <a href="forgot-password">Forgot password?</a>
+        </div>
+        <hr />
+        <div className="signUp">
+          <p>Need an account?</p>
+          <a href="signup">Sign Up</a>
+        </div>
         <Stack spacing={2} sx={{ width: "100%" }}>
           <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
             <Alert
