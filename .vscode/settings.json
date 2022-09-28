@@ -13,7 +13,7 @@
     "*.tsx": "${capture}.ts, ${capture}.css, ${capture}.scss",
     "tsconfig.json": "tsconfig.*.json"
   },
-  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.enabled": false,
   "explorer.sortOrder": "foldersNestsFiles",
 
   // Formatters
