@@ -272,7 +272,7 @@ export const taskColumns = [
   {
     field: "description",
     headerName: "Description",
-    width: 270,
+    width: 300,
   },
   {
     field: "clientName",
@@ -287,7 +287,7 @@ export const taskColumns = [
   {
     field: "view",
     headerName: "View",
-    width: 100,
+    width: 70,
     sortable: false,
     disableColumnMenu: true,
     renderCell: (params) => {

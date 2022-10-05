@@ -12,9 +12,11 @@ export const Datatable = (props) => {
     initializeApp(firebaseConfig);
     const dbRef = ref(getDatabase());
 
-    get(child(dbRef, props.db)).then((snapshot) =>
-      setTableData(snapshot.val())
-    );
+    get(child(dbRef, props.db))
+      .then((snapshot) => setTableData(snapshot.val()))
+      .catch((err) => {
+        console.log(err);
+      });
   }, [props.db]);
 
   return (

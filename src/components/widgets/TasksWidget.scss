@@ -3,6 +3,92 @@
   flex: 1;
   flex-direction: column;
   height: 3vh;
+  position: relative;
+
+  .newTaskBacking {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 50vw;
+    height: 50vh;
+    min-height: 310px;
+
+    margin-left: -26vw;
+    margin-top: 10vh;
+    z-index: 1;
+
+    -webkit-box-shadow: 2px 4px 10px 1px (0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(202, 202, 202, 0.47);
+    box-sizing: border-box;
+
+    background-color: white;
+    .newTaskBody {
+      -webkit-box-shadow: 2px 4px 10px 1px (0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+      margin-top: 10px;
+      height: 95%;
+      min-width: 98%;
+
+      .exit {
+        display: flex;
+        width: 98%;
+        height: 30px;
+        justify-content: flex-end;
+        color: #1976d2;
+        p {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .taskForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 15px;
+        height: 80%;
+
+        .due {
+          display: flex;
+          justify-content: space-around;
+        }
+
+        input {
+          outline: none;
+          border-left: none;
+          border-top: none;
+          border-right: none;
+        }
+
+        .buttonWrapper {
+          display: flex;
+          justify-content: center;
+
+          .addTask {
+            display: flex;
+            justify-content: center;
+            height: 4vh;
+            min-width: 160px;
+            min-height: 35px;
+            border-radius: 5%;
+            align-items: center;
+
+            background-color: #1976d2;
+            font-weight: 700;
+            border: none;
+            color: white;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .taskhead {
     display: flex;

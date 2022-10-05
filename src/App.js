@@ -21,18 +21,12 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { auth } from "./config";
 
 function App() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   return (
     <div className="App">
       <BrowserRouter>
-        {user === null ? (
-          <Routes>
-            <Route path="signin" element={<Signin />} />
-            <Route path="signup" element={<Signup />} />
-            <Route path="*" element={<Signin />} />
-          </Routes>
-        ) : (
+        {user !== null ? (
           <div className="list">
             <Sidebar />
             <div className="listContainer">
@@ -129,6 +123,12 @@ function App() {
               </div>
             </div>
           </div>
+        ) : (
+          <Routes>
+            <Route path="signin" element={<Signin />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="*" element={<Signin />} />
+          </Routes>
         )}
       </BrowserRouter>
     </div>

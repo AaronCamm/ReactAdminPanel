@@ -39,7 +39,7 @@ const Signin = () => {
   }, [user, loading]);
 
   return (
-    <div className="parentContainer">
+    <div className="signInContainer">
       <div className="loginContainer">
         <div className="logoContainer">
           <img src={img} className="logo" alt="logo" />

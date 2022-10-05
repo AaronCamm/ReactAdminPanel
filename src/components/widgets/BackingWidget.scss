@@ -9,10 +9,10 @@
   margin-right: -5px;
   color: rgb(65, 88, 90);
   height: 83vh;
+  min-height: 455px;
   border: 3px;
   box-sizing: border-box;
   .widget {
-    min-width: 115px;
     background-color: white;
     display: flex;
     flex: 1;

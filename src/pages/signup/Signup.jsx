@@ -42,7 +42,7 @@ const Signup = () => {
   }, [user, loading]);
 
   return (
-    <div className="parentContainer">
+    <div className="signUpContainer">
       <div className="loginContainer">
         <div className="logoContainer">
           <img src={img} className="logo" alt="logo" />
@@ -99,6 +99,10 @@ const Signup = () => {
             }}
           />
         </form>
+        <div className="signIn">
+          <p>Already have an account?</p>
+          <a href="signin">Sign In</a>
+        </div>
         <Stack spacing={2} sx={{ width: "100%" }}>
           <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
             <Alert
